@@ -1,0 +1,160 @@
+<!--order-detail/order-detail.wxml-->
+<view class='outside'>
+      <!-- 订单状态 -->
+    <view class='order-status-contain'>
+      <view class='row-in space-no'>
+        <image class='shop-head-img' src='{{shop_head_img}}'></image>
+        <view class='shop-name'>{{shop_name}}</view>
+      </view>
+      <view class='row-in space-ar'>
+        <view class='status-left-box column-in space-in'>
+          <view class='{{status_point[0]}}'></view>
+          <view class='{{long_string[0]}}'></view>
+          <view class='{{status_point[1]}}'></view>
+          <view class='{{long_string[1]}}'></view>
+          <view class='{{status_point[2]}}'></view>
+          <view class='{{long_string[2]}}'></view>
+          <view class='{{status_point[3]}}'></view>
+        </view>
+        <view class='status-right-box column-in space-ar'>
+          <view class='status-row-box row-in space-no'>
+            <view class='{{status_title[0]}}'>{{status_title_text[0]}}</view>
+            <view class='status-datetime'>{{status_datetime[0]}}</view>
+          </view>
+          <view class='status-row-box row-in space-no'>
+            <view class='{{status_title[1]}}'>{{status_title_text[1]}}</view>
+            <view class='status-datetime'>{{status_datetime[1]}}</view>
+          </view>
+          <view class='status-row-box row-in space-no'>
+            <view class='{{status_title[2]}}'>{{status_title_text[2]}}</view>
+            <view class='status-datetime'>{{status_datetime[2]}}</view>
+          </view>
+          <view class='status-row-box row-in space-no'>
+            <view class='{{status_title[3]}}'>{{status_title_text[3]}}</view>
+            <view class='status-datetime'>{{status_datetime[3]}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  <view class='contain'>
+    <!-- 订单价格计算 -->
+    <view class='order-price-calculate column-in space-ar'>
+      <view class='file-box column-in space-ar'>
+        <view class='row-in space-in'>
+          <view class='row-in'>
+            <image class='file-type' src='/static/icon/file-type-{{file_type}}.png'></image>
+            <view class='file-name'>{{file_name}}</view>
+          </view>
+          <view class='whether-delivery'>配送</view>
+        </view>
+        <view class='row-in'>
+          <view class='page-num'>实际页数 {{page_num}} 页</view>
+          <image class='statement' src='/static/icon/statement.png'></image>
+        </view>
+        <view class='row-in'>
+          <view class='unit-price'>{{order_type}} ￥{{unit_price}} / 页</view>
+        </view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/unit-price.png'></image>
+          <view class='left-title'>单价</view>
+        </view>
+        <view class='file-unit-price'>￥{{file_unit_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/page-num.png'></image>
+          <view class='left-title'>份数</view>
+        </view>
+        <view class='file-unit-price'>{{file_num}} 份</view>
+      </view>
+      <view class='devide-line'></view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/payment-2.png'></image>
+          <view class='left-title'>合计</view>
+        </view>
+        <view class='file-all-price'>￥{{all_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/bind.png'></image>
+          <view class='left-title'>装订</view>
+        </view>
+        <view class='bind-price'>￥{{bind_price}}</view> 
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/delivery.png'></image>
+          <view class='left-title'>配送</view>
+        </view>
+        <view class='delivery-price'>￥{{delivery_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/discount.png'></image>
+          <view class='left-title'>折扣</view>
+        </view>
+        <view class='discount-price'>-￥{{discount_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/payment.png'></image>
+          <view class='payment'>实付</view>
+        </view>
+        <view class='payment-price'>￥{{payment_price}}</view>
+      </view>
+    </view>
+    <view class='devide-line'></view>
+    <!-- 按钮 -->
+    <view class='btn-box row-in space-in'>
+      <view class='row-in'>
+        <image class='btn-icon' src='/static/icon/chargeback.png'></image>
+        <view class='btn gray'>申请退单</view>
+      </view>
+      <view class='devide-long-string'>|</view>
+      <view class='row-in'>
+        <image class='btn-icon' src='/static/icon/call.png'></image>
+        <view class='btn blk'>联系商家</view>
+      </view>
+      <view class='devide-long-string'>|</view>
+      <view class='row-in'>
+        <image class='btn-icon' src='/static/icon/verify.png'></image>
+        <view class='btn blk'>确认收件</view>
+      </view>
+    </view>
+    <!-- 订单其它信息 -->
+  </view>
+
+  <view class='order-orther-data'>
+      <view class='recipients-data column-in space-ar'>
+        <view class='row-in space-in'>
+          <view class='title-left'>收件人</view>
+          <view class='data-right'>{{recipients_name}} {{recipients_phonenum}}</view>
+        </view>
+        <view class='recipients-address'>{{recipients_address}}</view>
+        <view class='row-in space-in'>
+          <view class='title-left'>订单号</view>
+          <view class='data-right'>{{order_id}}</view>
+        </view>
+        <view class='row-in space-in'>
+          <view class='title-left'>下单时间</view>
+          <view class='data-right'>{{place_order_datetime}}</view>
+        </view>
+        <view class='row-in space-in'>
+          <view class='title-left'>接单时间</view>
+          <view class='data-right'>{{take_order_datetime}}</view>
+        </view>
+        <view class='row-in space-in'>
+          <view class='title-left'>印成时间</view>
+          <view class='data-right'>{{print_finish_datetime}}</view>
+        </view>
+        <view class='row-in space-in'>
+          <view class='title-left'>完成时间</view>
+          <view class='data-right'>{{order_finish_datetime}}</view>
+        </view>
+      </view>
+    </view>
+</view>

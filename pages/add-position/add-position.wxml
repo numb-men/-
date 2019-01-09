@@ -1,0 +1,51 @@
+<!--pages/add-position/add-position.wxml-->
+<view class='body' style='{{contain_style}}'>
+  <view class="position-human">
+    
+    <view>
+      <input name='human_name' bindinput='humanName' placeholder="收件人" value='{{init_name}}'/>
+    </view>
+  </view>
+
+  <view class="position-human">
+  
+    <view>
+      <input name='human_phone' bindinput='humanPhone' placeholder="手机电话" value='{{init_phone}}'/>
+    </view>
+  </view>
+  
+   <view class='line-sapce'></view>
+
+  <view class="section">
+    <view class="section__title">所在地区:   </view>
+    <view class="picker">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view>
+          {{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class='enter-icon'>
+    <image class='icon' src='/static/icon/enter.png'></image>
+    </view>
+  </view>
+
+  <view class='detail-position'>
+    <view class='detail_position_input'>
+      <input bindinput='detail_position' placeholder="详细地址" value='{{init_detail}}'/>
+    </view>
+  </view>
+  <view class='space'></view>
+
+  <view class='default-position'>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox">
+        <checkbox value="0" checked='true'/>
+        设为默认地址
+      </label>
+    </checkbox-group>
+  </view>
+  <view class='save' bindtap='savePosition'>
+    保存
+  </view>
+</view>

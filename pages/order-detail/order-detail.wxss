@@ -1,0 +1,260 @@
+/* order-detail/order-detail.wxss */
+/*.wxss*/
+
+.outside {
+  background: #f6f4f7;
+  padding: 25rpx 15rpx;
+}
+.contain {
+  width: 700rpx;
+  padding: 10rpx;
+  background: #fefefe;
+  border-radius: 15rpx;
+}
+.order-status-contain {
+  margin-bottom: 25rpx;
+  background: #fefefe;
+  border-radius: 15rpx;
+  padding: 25rpx 25rpx 50rpx 25rpx;
+  width: 670rpx;
+}
+.shop-head-img {
+  width: 45rpx;
+  height: 45rpx;
+  margin: 7.5rpx 27.5rpx 7.5rpx 7.5rpx;
+  border-radius: 50%;
+}
+.shop-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+.status-left-box {
+  width: 100rpx;
+  height: 160rpx;
+  margin-top: 10rpx;
+  padding-top: 20rpx;
+  padding-right: 30rpx;
+}
+.status-right-box {
+  margin-top: 10rpx;
+  line-height: 50rpx;
+}
+.status-row-box {
+}
+.status-datetime {
+  font-size: 23rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+  color: #666666;
+}
+.btn-box {
+  margin: 15rpx 10rpx;
+}
+.btn-icon {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+  margin-right: 5rpx;
+}
+.btn {
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 7rpx;
+}
+.devide-long-string {
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #c9c9c9;
+  padding: 0 10rpx;
+}
+.order-price-calculate {
+  margin-top: 15rpx;
+  padding: 15rpx;
+  width: 670rpx;
+}
+.file-box {
+  border-radius: 7rpx;
+  padding: 5rpx;
+  margin-left: 15rpx;
+  background: #fefefe;
+}
+.file-type {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5rpx 15rpx 5rpx 5rpx;
+}
+.file-name {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.whether-delivery {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #666666;
+}
+.page-num {
+  font-size: 23rpx;
+  line-height: 50rpx;
+  color: #343131;
+  padding-left: 60rpx;
+}
+.statement {
+  margin: 12.5rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+.unit-price {
+  padding-left: 60rpx;
+  padding-bottom: 15rpx;
+  font-size: 23rpx;
+  line-height: 50rpx;
+}
+
+.file-unit-price {
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.file-all-price {
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #ffcc00;
+  font-weight: bold;
+}
+.btn-icon-2 {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 5rpx;
+  margin-right: 15rpx;
+  margin-left: 20rpx;
+}
+.left-title {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #343131;
+}
+.bind-price {
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.delivery-price {
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.discount-price {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: red;
+}
+.payment {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #343131;
+  font-weight: bold;
+}
+.payment-price {
+  font-size: 30rpx;
+  line-height: 70rpx;
+  font-weight: bold;
+}
+
+.status-point-finish {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  margin: 0 41rpx;
+  background: #ffcc00;
+}
+.status-point-wait {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  margin: 0 35rpx;
+  border: 7rpx solid #343131;
+}
+.status-point-future {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  margin: 0 43rpx;
+  border: 2rpx solid #c9c9c9;
+}
+.long-string-finish {
+  width: 4rpx;
+  height: 20rpx;
+  background: #ffcc00;
+  margin: 0 48rpx;
+}
+.long-string-wait {
+  width: 4rpx;
+  height: 12rpx;
+  background: #c9c9c9;
+  margin: 0 48rpx;
+}
+.long-string-future {
+  width: 4rpx;
+  height: 12rpx;
+  background: #c9c9c9;
+  margin: 0 48rpx;
+}
+.status-title-finish {
+  color: #ffcc00;
+  width: 250rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+}
+.status-title-wait {
+  color: #000;
+  width: 250rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+}
+.status-title-future {
+  color: #c9c9c9;
+  width: 250rpx;
+  font-size: 23rpx;
+  line-height: 35rpx;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+}
+
+.order-orther-data {
+  margin-top: 25rpx;
+  padding: 25rpx 35rpx;
+  background: #fefefe;
+  border-radius: 15rpx;
+}
+.recipients-data {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.title-left {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.data-right {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.recipients-address {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.devide-line {
+  width: 100%;
+  height: 2rpx;
+  margin: 10rpx 0;
+  background: #f6f4f7;
+}

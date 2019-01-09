@@ -1,0 +1,39 @@
+/**app.wxss**/
+.row-in {
+  display: flex;
+  flex-direction: row;
+}
+.column-in {
+  display: flex;
+  flex-direction: column;
+}
+.space-in {
+  justify-content: space-between;
+}
+.space-ar {
+  justify-content: space-around;
+}
+.space-no {
+  justify-content: flex-start;
+}
+.border-f7{
+  border: 2rpx solid #f6f4f7;
+}
+.float-fixed {
+  position: fixed;
+  z-index: 100;
+}
+.hr {
+  width: 100%;
+  height: 5rpx;
+  background: #f6f4f7;
+}
+.bg-blk {
+  background: #343131;
+}
+.gray {
+  color: #666666;
+}
+.blk {
+  color: #343131;
+}

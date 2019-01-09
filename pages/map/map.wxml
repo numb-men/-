@@ -1,0 +1,22 @@
+<!--pages/map/map.wxml-->
+<view class='top-nvg row-in space-ar'>
+  <view class='arround-printer-num'>
+    周边共有 {{arround_printer_num}} 家打印店
+  </view>
+  <image class='join-us-icon' src='/static/icon/float-item-icon-5.png'></image>
+  <view class='join-us'>
+    加盟我们
+  </view>
+</view>
+<view class='nouse'></view>
+<view class='arround-printer-map'>
+  <map
+      id="arround-printer-map"
+      style="width: 100%; height: {{screenHeight}}px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+    ></map>
+</view>

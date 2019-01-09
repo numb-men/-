@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "趣小印",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "disableScroll": false
+}

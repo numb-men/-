@@ -1,0 +1,52 @@
+<!--pages/receive-manage/receive-manage.wxml-->
+
+<!--pages/order-list/order-list.wxml-->
+<view class='order-list column-in' style='{{contain_style}}'>
+  <!--删除确认的对话框-->
+  <modal title="确认删除吗？" hidden="{{!isdelete}}" confirm-text="确定"
+          cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
+  </modal>
+  <view wx:for="{{order_list}}">
+    <!-- 订单子项包围 -->
+    <view class='order-item-contain row-in space-ar' wx:key="*this">
+      <!-- 左侧样式 -->
+      <view class='left-style column-in space-in'>
+        <view class='left-style-ends'></view>
+        <view class='left-style-center'></view>
+        <view class='left-style-ends'></view>
+      </view>
+      <!-- 订单子项 -->
+      <view class='position-item column-in space-ar'>
+        <!-- 收件人以及联系电话 -->
+        <view class='position-item-top row-in space-in'>
+          <view wx:if="{{item.is_default}}"><image class='position-type' src="/static/icon/position-type-default.png"></image></view>
+          <view wx:else><image class='position-type' src="/static/icon/position-type-normal.png"></image></view>
+          <view class='human-name'>{{item.human_name}}</view>
+          <view class='human-phone'>{{item.human_phone}}</view>
+        </view>
+        <!-- 收件地址 -->
+        <view class='position-item-center row-in'>
+          <view class='position-province'>{{item.province}}</view>
+          <view class='position-city'>{{item.city}}</view>
+          <view class='position-country'>{{item.country}}</view>
+          <view class='detail-position'>{{item.detail_position}}</view>
+        </view>
+        <view class='hr'></view>
+        <!-- 地址操作栏 -->
+        <view class='operation'>
+          <!-- 编辑 -->
+          <image class='position-op-edit' src="/static/icon/edit.png" bindtap='edit_position' data-text="{{item.id}}"></image>
+          <view class='position-edit' bindtap='edit_position' data-text="{{item.id}}">编辑</view>
+          <!-- 删除 -->
+          <image class='position-op-delete' src="/static/icon/delete.png" bindtap='delete_position' data-text="{{item.id}}"></image>
+          <view class='position-delete' bindtap='delete_position' data-text="{{item.id}}">删除</view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</view>
+<view bindtap='adddetial'>
+  <image class="add_icon" src="/static/icon/float-ball.png"></image>
+</view>
+

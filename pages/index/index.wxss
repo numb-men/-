@@ -1,0 +1,157 @@
+/**index.wxss**/
+.swiper-box {
+    height: 360rpx;
+    width: 100%;
+}
+swiper-item image {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+.print-queue {
+  width: 735rpx;
+  padding: 7.5rpx;
+}
+.print-queue-title {
+  width: 190rpx;
+  padding: 0 15rpx;
+  font-size: 30rpx;
+  line-height: 65rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+.bkf7 {
+  background: #f6f4f7;
+}
+.printer-img{
+  width: 180rpx;
+  height: 170rpx;
+  padding: 50rpx 20rpx 15rpx 20rpx;
+}
+.print-box {
+  width: 480rpx;
+  height: 255rpx;
+  padding: 7.5rpx 10rpx 0 10rpx;
+}
+.printer-box {
+  border-right: 2rpx solid #f6f4f7;
+}
+.print-item {
+  width: 480rpx;
+  height: 50rpx;
+  padding: 2.5rpx 0;
+}
+.file-type {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 5rpx;
+}
+.file-name {
+  font-size: 23rpx;
+  width: 310rpx;
+  line-height: 50rpx;
+}
+.print-status-icon {
+  width: 30rpx;
+  height: 30rpx;
+  padding: 10rpx 5rpx;
+}
+.print-status-text {
+  font-size: 18rpx;
+  width: 60rpx;
+  line-height: 50rpx;
+}
+.look-all {
+  width: 480rpx;
+  font-size: 23rpx;
+  line-height: 25rpx;
+  margin-bottom: 15rpx;
+  color: #ffcc00;
+  text-align: right;
+  padding: 0 10rpx;
+}
+.print-type-sle {
+  width: 735rpx;
+  padding: 7.5rpx;
+  background: #f6f4f7;
+}
+.privacy-policy {
+  margin-bottom: 15rpx;
+}
+.private-policy-title {
+  font-size: 23rpx;
+  color: #ffcc00;
+  text-align: right;
+  width: 675rpx;
+  line-height: 40rpx;
+  padding: 0 7.5rpx;
+}
+.statement {
+  width: 30rpx;
+  height: 30rpx;
+  padding: 5rpx;
+}
+.print-type-sle-item {
+  width: 700rpx;
+  padding: 10rpx 5rpx;
+  margin: 20rpx 10rpx;
+  height: 130rpx;
+  background: #fff;
+  border-radius: 7rpx;
+}
+.print-type-icon {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 5rpx;
+  margin: 10rpx 50rpx 10rpx 30rpx;
+}
+.print-type-name {
+  font-size: 30rpx;
+  line-height: 45rpx;
+}
+.print-type-describe {
+  font-size: 23rpx;
+  line-height: 27.5rpx;
+  color: #666666;
+  height: 55rpx;
+}
+
+/*提示*/
+.notice {
+  width: 500rpx;
+  height: 200rpx;
+  position: fixed;
+  top: 320rpx;
+  left: 100rpx;
+  background: #fefefe;
+  border-radius: 7rpx;
+  z-index: 100;
+  padding: 25rpx;
+}
+.notice-pic {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 5rpx;
+  margin-right: 15rpx;
+}
+.notice-title {
+  font-size: 30rpx;
+  color: #343131;
+  line-height: 50rpx;
+}
+.notice-text{
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 50rpx;
+  height: 100rpx;
+}
+.i-know-it {
+  font-size: 23rpx;
+  width: 120rpx;
+  line-height: 40rpx;
+  padding: 5rpx;
+  text-align: center;
+  color:#343131;
+}

@@ -1,0 +1,17 @@
+<!--pages/upload-pic/upload-pic.wxml-->
+<view class='contain' style="{{contain_style}}">
+  <view class='pic-list' wx:if="{{pic_list.length > 0}}">
+    <view wx:for="{{pic_list}}" wx:key="*this">
+      <image class='image-box' src='{{item}}' mode='widthFix' bindtouchstart="touchStart" bindtouchend="touchEnd" catchtap='deletePic' data-view="{{index}}"></image>
+    </view>
+  </view>
+  
+  <view class='pic-num' wx:if="{{pic_list.length > 0}}">一共有 {{pic_list.length}} 张图片</view>
+
+  <view class='add-pic-btn' catchtap='add_pic'>
+    <image class='add-pic-btn-icon' src='/static/icon/add-pic.png'></image>
+    <view class='add-pic-btn-text'>点击按钮添加图片~</view>
+  </view>
+</view>
+
+<view class='verify-btn'>下一步</view>

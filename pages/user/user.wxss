@@ -1,0 +1,86 @@
+/* pages/user/user.wxss */
+.user-bg {
+  width: 100%;
+  height: 420rpx;
+  display: block;
+}
+.user-bg2 {
+  width: 100%;
+  height: 700rpx;
+  background: #f6f4f7;
+}
+.user-box {
+  top: 100rpx;
+  left: 25rpx;
+  height: 170rpx;
+}
+.head-img {
+  width: 140rpx;
+  height: 140rpx;
+  padding: 5rpx;
+  border-radius: 50%;
+  margin: 10rpx 25rpx 10rpx 15rpx;
+  background: #fff;
+}
+.nick-name {
+  font-size: 32rpx;
+  line-height: 45rpx;
+  color: #ffcc00;
+  padding: 5rpx 10rpx;
+  margin-top: 30rpx;
+}
+.phone-num {
+  font-size: 23rpx;
+  line-height: 35rpx;
+  padding: 5rpx 10rpx;
+  color: #fff;
+  margin-bottom: 40rpx;
+}
+.menu-1{
+  top: 330rpx;
+}
+.menu-2 {
+  top: 565rpx;
+}
+.menu-3 {
+  top: 800rpx;
+}
+.float-menu {
+  left: 25rpx;
+  width: 650rpx;
+  background: #fefefe;
+  padding: 10rpx 25rpx;
+  border-radius: 7rpx;
+}
+
+.float-item {
+  margin: 15rpx 0;
+}
+.float-item-icon {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 0 25rpx 0 10rpx;
+}
+.float-item-title {
+  width: 490rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+.online-service {
+  width: 490rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #000;
+  text-align: left;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: #fefefe;
+}
+.online-service::after{ border: none; }
+.enter-icon {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 5rpx;
+}

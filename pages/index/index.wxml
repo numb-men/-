@@ -1,0 +1,104 @@
+<!--pages/index/index.wxml-->
+<!-- 顶部滚动图 -->
+<swiper  indicator-dots="true" indicator-active-color='#f2f7fa' indicator-color='#666666' circular="true" autoplay="true" interval="5000" duration="500" class='swiper-box'>
+  <block wx:for="{{swiper_imgs}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 打印队列 -->
+<view class="row-in space-ar print-queue border-f7">
+  <view class='column-in space-ar printer-box'>
+    <image class="printer-img" src="/static/pic/printer.png"></image>
+    <view class='print-queue-title'>打印队列</view>
+  </view>
+  <view class='column-in space-ar'>
+    <view class="column-in space-ar print-box">
+      <view class='row-in space-in print-item' catchtap='to_order_detail_page'>
+        <image class='file-type' src='/static/icon/file-type-ppt.png'></image>
+        <view class='file-name'>实验1.ppt</view>
+        <image src='/static/icon/print-status-1.png' class='print-status-icon'></image>
+        <view class='print-status-text'>{{print_status[0]}}</view>
+      </view>
+      <view class='row-in space-ar print-item' catchtap='to_order_detail_page'>
+        <image class='file-type' src='/static/icon/file-type-xls.png'></image>
+        <view class='file-name'>实验3.xls</view>
+        <image src='/static/icon/print-status-2.png' class='print-status-icon'></image>
+        <view class='print-status-text'>{{print_status[1]}}</view>
+      </view>
+      <view class='row-in space-ar print-item' catchtap='to_order_detail_page'>
+        <image class='file-type' src='/static/icon/file-type-doc.png'></image>
+        <view class='file-name'>实验4.doc</view>
+        <image src='/static/icon/print-status-3.png' class='print-status-icon'></image>
+        <view class='print-status-text'>{{print_status[2]}}</view>
+      </view>
+      <view class='row-in space-ar print-item' catchtap='to_order_detail_page'>
+        <image class='file-type' src='/static/icon/file-type-pdf.png'></image>
+        <view class='file-name'>福州大学计算机实验报告2.pdf</view>
+        <image src='/static/icon/print-status-4.png' class='print-status-icon'></image>
+        <view class='print-status-text'>{{print_status[3]}}</view>
+      </view>
+    </view>
+    <view class='look-all' bindtap='to_order_list_page'>查看更多</view>
+  </view>
+</view>
+
+<!-- 打印类型选择 -->
+<view class="print-type-sle border-f7">
+  <!-- 文件打印 -->
+  <view class="print-type-sle-item row-in border-f7">
+    <image class='print-type-icon' src='/static/icon/print-type-file.png'></image>
+    <view class='column-in space-ar'>
+      <view class='print-type-name'>文件打印</view>
+      <view class='print-type-describe'>
+        (支持pdf doc xls ppt txt 等文件类型)
+      </view>
+    </view>
+  </view>
+  <!-- 图片打印 -->
+  <view class="print-type-sle-item row-in border-f7" catchtap='to_upload_pic_page'>
+    <image class='print-type-icon' src='/static/icon/print-type-img.png'></image>
+    <view class='column-in space-ar'>
+      <view class='print-type-name'>图片打印</view>
+      <view class='print-type-describe'>
+        (支持选择本地图片、拍摄图片打印)
+      </view>
+    </view>
+  </view>
+  <!-- 证件打印 -->
+  <view class="print-type-sle-item row-in border-f7" catchtap='to_upload_pic_page'>
+    <image class='print-type-icon' src='/static/icon/print-type-credentials.png'></image>
+    <view class='column-in space-ar'>
+      <view class='print-type-name'>证件打印</view>
+      <view class='print-type-describe'>
+        (支持身份证等多种证件打印)
+      </view>
+    </view>
+  </view>
+  <!-- 敬请期待 -->
+  <view class="print-type-sle-item row-in border-f7">
+    <image class='print-type-icon' src='/static/icon/print-type-more.png'></image>
+    <view class='column-in space-ar'>
+      <view class='print-type-name'>更多类型</view>
+      <view class='print-type-describe'>
+        (给我们反馈您需要的类型，我们会在下个版本增加)
+      </view>
+    </view>
+  </view>
+  <!-- 隐私政策 -->
+  <view class='privacy-policy row-in space-ar'>
+    <view class='private-policy-title'>隐私声明</view>
+    <image class="statement" src='/static/icon/statement.png'></image>
+  </view>
+</view>
+
+<view class='notice' wx:if='{{notice_me == true}}'>
+  <view class='row-in'>
+    <image class='notice-pic' src='/static/icon/notice.png'></image>
+    <view class='notice-title'>{{notice_title}}</view>
+  </view>
+  <view class='notice-text'>{{notice_detail}}</view>
+  <button class='i-know-it' bindgetuserinfo='getUserInfo' open-type="getUserInfo">我知道了</button>
+</view>

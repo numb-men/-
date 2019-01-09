@@ -1,0 +1,124 @@
+/* pages/receive-manage/receive-manage.wxss */
+
+.order-list {
+  padding: 25rpx 15rpx;
+  background: #f6f4f7;
+}
+.order-item-contain {
+  padding: 0 10rpx;
+}
+.left-style {
+  width: 30rpx;
+  height: 220rpx;
+}
+.left-style-ends {
+  width: 6rpx;
+  height: 95rpx;
+  margin: 0 12rpx;
+  background: #fefefe;
+}
+.left-style-center {
+  width: 14rpx;
+  height: 14rpx;
+  margin: 0 8rpx;
+  border-radius: 50%;
+  background: #fefefe;
+}
+.position-item {
+  width: 600rpx;
+  height: 200rpx;
+  padding: 0rpx 15rpx;
+  margin: 10rpx 0;
+  background: #fefefe;
+  border-radius: 15rpx;
+}
+.position-item-top {
+}
+.position-type {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 5rpx;
+}
+.human-name {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  width: 400rpx;
+  padding-top: 6rpx;
+  padding-left: 8rpx;
+  font-weight: bold;
+}
+.human-phone {
+  font-size: 23rpx;
+  color: #ffcc00;
+  padding-top: 6rpx;
+  line-height: 50rpx;
+  text-align: right;
+  width: 100rpx; /*150*/
+  padding-right: 60rpx;
+}
+.position-item-center {
+  padding-bottom: 15rpx;
+}
+.position-province {
+  font-size: 23rpx;
+  color: #343131;
+  line-height: 40rpx;
+}
+.position-city {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.position-country {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.detail-position{
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+.operation{
+  height: 60rpx;
+  margin-left: 300rpx;
+}
+.position-op-edit{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+  float: left;
+}
+.position-op-delete{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+  float: left;
+}
+.position-edit{
+  color: #131211;
+  font-size: 27rpx;
+  line-height: 60rpx;
+  width: 70rpx;
+  padding-right: 15rpx;
+  float: left;
+}
+.position-delete {
+  color: #13120f;
+  font-size: 27rpx;
+  line-height: 60rpx;
+  width: 70rpx;
+  padding-right: 25rpx;
+  float: left;
+}
+
+
+.add_icon{
+  position:fixed;
+  width:80rpx;
+  height:80rpx;
+  bottom:35rpx;
+  right:35rpx;
+  z-index: 100;
+}
+
