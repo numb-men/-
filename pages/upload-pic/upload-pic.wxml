@@ -6,7 +6,7 @@
     </view>
   </view>
   
-  <view class='pic-num' wx:if="{{pic_list.length > 0}}">一共有 {{pic_list.length}} 张图片</view>
+  <view class='pic-num' wx:if="{{pic_list.length > 0}}">一共有 {{pic_list.length}} 张图片（长按图片删除）</view>
 
   <view class='add-pic-btn' catchtap='add_pic'>
     <image class='add-pic-btn-icon' src='/static/icon/add-pic.png'></image>

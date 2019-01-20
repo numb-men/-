@@ -5,7 +5,7 @@
   </view>
   <image class='join-us-icon' src='/static/icon/float-item-icon-5.png'></image>
   <view class='join-us'>
-    加盟我们
+    店铺加盟
   </view>
 </view>
 <view class='nouse'></view>
