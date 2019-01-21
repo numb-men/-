@@ -91,7 +91,6 @@
 .radio-group {
   padding-left: 30rpx;
 }
-
 radio {
   transform:scale(0.75);
 }
@@ -125,6 +124,7 @@ radio {
 .comment-top {
   font-size: 28rpx;
   line-height: 60rpx;
+  margin-left: 15rpx;
 }
 .comment-content {
   width: 580rpx;
