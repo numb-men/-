@@ -58,4 +58,10 @@ Page({
   touchEnd: function (e) {
     clearInterval(interval);
   },
+
+  to_print_settings_page: function () {
+    wx.navigateTo({
+      url: '../print-settings/print-settings',
+    })
+  },
 })

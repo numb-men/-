@@ -14,4 +14,4 @@
   </view>
 </view>
 
-<view class='verify-btn'>下一步</view>
+<view class='verify-btn' bindtap='to_print_settings_page'>下一步</view>

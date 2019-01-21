@@ -1,0 +1,109 @@
+<!--pages/print-settings/print-settings.wxml-->
+<view class='contain'>
+  <view class='file-contain'>
+    <view class='label-title'>文件</view>
+    <view class='hr'></view>
+    <view class='a-file row-in space-in'>
+      <image class='file-img' src='{{file_img}}'></image>
+      <view class='file-name'>{{file_name}}</view>
+      <image class='show-sle' src='/static/icon/enter.png'></image>
+    </view>
+  </view>
+  <view class='settings'>
+    <!-- 规格 -->
+    <view class='setting-line row-in space-in'>
+      <image class='setting-icon' src="/static/icon/paper-size.png"></image>
+      <view class='setting-names'>规格</view>
+      <view class='setting-sle'>{{settings.paper_size}}</view>
+      <image class='show-sle' src='/static/icon/enter.png'></image>
+    </view>
+    <view class='hr'></view>
+    <!-- 装订 -->
+    <view class='setting-line row-in space-in'>
+      <image class='setting-icon' src="/static/icon/bind.png"></image>
+      <view class='setting-names'>装订</view>
+      <view class='setting-sle'>{{settings.bind}}</view>
+      <image class='show-sle' src='/static/icon/enter.png'></image>
+    </view>
+    <view class='hr'></view>
+    <!-- 份数 -->
+    <view class='setting-line row-in space-in'>
+      <image class='setting-icon' src="/static/icon/page-num.png"></image>
+      <view class='setting-names'>份数</view>
+      <input class='file-num-input'
+        maxlength='30'
+        value='{{settings.file_num}}' 
+        type='number' 
+        maxlength='3' 
+        bindblur='file_num_change' 
+        bindconfirm='file_num_change'>
+      </input>
+      <image class='add' src='/static/icon/add.png'></image>
+      <image class='reduce' src='/static/icon/reduce.png'></image>
+    </view>
+    <view class='hr'></view>
+    <!-- 单双面 -->
+    <view class='setting-line row-in space-in'>
+      <image class='setting-icon' src="/static/icon/sigle-double-page.png"></image>
+      <view class='setting-names'>面数</view>
+      <radio-group class='radio-group' bindchange='sigle_double_page_change'>
+        <label class='radio' wx:for='{{sigle_double_page}}' wx:key="*this">
+          <radio value='{{item.name}}' checked='{{item.checked}}'>{{item.name}}</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view class='hr'></view>
+    <!-- 黑白彩色 -->
+    <view class='setting-line row-in space-in'>
+      <image class='setting-icon' src="/static/icon/print-color.png"></image>
+      <view class='setting-names'>颜色</view>
+      <radio-group class='radio-group' bindchange='print_color_change'>
+        <label class='radio' wx:for='{{print_color}}' wx:key="*this">
+          <radio value='{{item.name}}' checked='{{item.checked}}'>{{item.name}}</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view class='hr'></view>
+    <!-- 自取配送 -->
+    <view class='setting-line row-in space-in'>
+      <image class='setting-icon' src="/static/icon/delivery.png"></image>
+      <view class='setting-names'>配送</view>
+      <radio-group class='radio-group' bindchange='whether_delivery_change'>
+        <label class='radio' wx:for='{{whether_delivery}}' wx:key="*this">
+          <radio value='{{item.name}}' checked='{{item.checked}}'>{{item.name}}</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view class='hr'></view>
+    <!-- 取件人 -->
+    <view class='consignee-sle row-in space-in'>
+      <view class='consignee column-in space-no'>
+        <view class='consignee-top row-in space-in'>
+          <image class='setting-icon' src='/static/icon/consignee.png'></image>
+          <view class='setting-names'>取件人</view>
+          <view class='consignee-name-phone'>{{consignee.name}} {{consignee.phone}}</view>
+        </view>
+        <view class='consignee-addr'>{{consignee.addr}}</view>
+      </view>
+      <image class='show-sle' src='/static/icon/enter.png'
+        style='padding:50rpx 0;'></image>
+    </view>
+    <view class='hr'></view>
+    <!-- 备注 -->
+    <view class='comment'>
+      <view class='row-in space-no'>
+        <image class='setting-icon' src="/static/icon/comment.png"></image>
+        <view class='comment-top'>备注</view>
+      </view>
+      <textarea class='comment-content'
+        value='{{comment}}' 
+        placeholder='{{comment_p}}'
+        placeholder-class='comment-content-p' 
+        bindblur='comment_change' 
+        bindconfirm='comment_change'>
+      </textarea>
+    </view>
+  </view>
+</view>
+
+<view class='verify-btn'>下一步</view>

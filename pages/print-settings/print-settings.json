@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "打印设置",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 50,
+  "disableScroll": false
+}

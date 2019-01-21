@@ -1,0 +1,154 @@
+/* pages/print-settings/print-settings.wxss */
+.contain {
+  padding: 25rpx;
+  padding-bottom: 120rpx;
+  width: 700rpx;
+  background: #f6f4f7;
+}
+.hr {
+  width: 100%;
+  height: 3rpx;
+  color: #f6f4f7;
+  margin: 5rpx;
+}
+.file-contain {
+  margin-bottom: 20rpx;
+  border-radius: 7rpx;
+  padding: 15rpx 25rpx;
+  background: #fefefe;
+}
+.label-title {
+  padding-left: 10rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.a-file {
+  padding: 15rpx 10rpx;
+}
+.file-img {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 5rpx;
+  margin-right: 15rpx;
+}
+.file-name {
+  width: 460rpx;
+  font-size: 23rpx;
+  line-height: 60rpx;
+}
+.settings {
+  border-radius: 7rpx;
+  padding: 15rpx 25rpx;
+  background: #fefefe;
+}
+.setting-line {
+  padding: 15rpx 10rpx;
+}
+.setting-icon {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+  margin-right: 15rpx;
+}
+.setting-names {
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.setting-sle {
+  font-size: 25rpx;
+  line-height: 60rpx;
+  color: #666666;
+  width: 380rpx;
+  text-align: right;
+}
+.show-sle {
+  width: 40rpx;
+  height: 40rpx;
+  padding:10rpx;
+  padding-right: 0;
+}
+.add {
+  width: 30rpx;
+  height: 30rpx;
+  padding:15rpx;
+}
+.reduce {
+  width: 30rpx;
+  height: 30rpx;
+  padding:15rpx;
+}
+.file-num-input{
+  width: 80rpx;
+  text-align: center;
+  padding: 5rpx;
+  margin-left: 220rpx;
+  font-size: 28rpx;
+  color: #343131;
+  background: #f6f4f7;
+  font-weight: bold;
+  border-radius: 7rpx;
+}
+.radio-group {
+  padding-left: 30rpx;
+}
+
+radio {
+  transform:scale(0.75);
+}
+.radio {
+  padding: 15rpx;
+  padding-left: 80rpx;
+  font-size: 30rpx;
+}
+.consignee-sle {
+  padding: 15rpx 10rpx;
+}
+.consignee {
+  width: 560rpx;
+}
+.consignee-top {
+}
+.consignee-name-phone {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  width: 370rpx;
+  text-align: right;
+}
+.consignee-addr {
+  font-size: 25rpx;
+  line-height: 60rpx;
+  text-align: right;
+}
+.comment {
+  padding: 15rpx 10rpx;
+}
+.comment-top {
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.comment-content {
+  width: 580rpx;
+  height: 300rpx;
+  padding:15rpx 25rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  background: #f7f7f7;
+  border-radius: 7rpx;
+}
+.comment-content-p {
+  font-size: 28rpx;
+}
+.verify-btn {
+  width: 750rpx;
+  background: #fefefe;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #343131;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  border-top: 0.2rpx solid #f6f4f7;
+}
