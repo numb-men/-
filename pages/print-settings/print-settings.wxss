@@ -36,6 +36,46 @@
   font-size: 23rpx;
   line-height: 60rpx;
 }
+.shop-contain {
+  margin-bottom: 20rpx;
+  border-radius: 7rpx;
+  padding: 15rpx 25rpx;
+  background: #fefefe;
+}
+.shop {
+  padding: 15rpx 10rpx;
+}
+.shop-left{
+}
+.shop-img {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 5rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.shop-name {
+  width: 300rpx;
+  padding-right: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.location-icon {
+  width: 35rpx;
+  height: 35rpx;
+  padding: 10rpx 5rpx;
+}
+.distance {
+  font-size: 23rpx;
+  line-height: 60rpx;
+}
+.shop-addr {
+  width: 550rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  text-align: right;
+}
 .settings {
   border-radius: 7rpx;
   padding: 15rpx 25rpx;

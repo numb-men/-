@@ -1,5 +1,6 @@
 <!--pages/print-settings/print-settings.wxml-->
 <view class='contain'>
+  <!-- 文件 -->
   <view class='file-contain'>
     <view class='label-title'>文件</view>
     <view class='hr'></view>
@@ -9,6 +10,25 @@
       <image class='show-sle' src='/static/icon/enter.png'></image>
     </view>
   </view>
+  <!-- 店铺 -->
+  <view class='shop-contain'>
+    <view class='label-title'>店铺</view>
+    <view class='hr'></view>
+    <view class='shop row-in space-in'>
+      <view class='shop-left column-in space-in'>
+        <view class='row-in'>
+          <image class='shop-img' src='{{shop.shop_img}}'></image>
+          <view class='shop-name'>{{shop.shop_name}}</view>
+          <image class='location-icon' src='/static/icon/location.png'></image>
+          <view class='distance'>{{shop.shop_distance}} km</view>
+        </view>
+        <view class='shop-addr'>{{shop.shop_addr}}</view>
+      </view>
+      <image class='show-sle' src='/static/icon/enter.png'
+        style='padding:40rpx 0;'></image>
+    </view>
+  </view>
+  <!-- 详细设置项 -->
   <view class='settings'>
     <!-- 规格 -->
     <view class='setting-line row-in space-in'>
@@ -93,7 +113,7 @@
       <view class='consignee column-in space-no'>
         <view class='consignee-top row-in space-in'>
           <image class='setting-icon' src='/static/icon/consignee.png'></image>
-          <view class='setting-names'>取件人</view>
+          <view class='setting-names'>收件人</view>
           <view class='consignee-name-phone'>{{consignee.name}} {{consignee.phone}}</view>
         </view>
         <view class='consignee-addr'>{{consignee.addr}}</view>

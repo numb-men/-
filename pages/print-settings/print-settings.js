@@ -41,6 +41,12 @@ Page({
     },
     comment: "",
     comment_p: "备注信息..",
+    shop: {
+      shop_img: "/static/icon/shop-head-img.png",
+      shop_name: "八号楼鸿鑫打印店",
+      shop_distance: "1.2",
+      shop_addr: "上街镇福州大学生活一区8号楼楼下"
+    },
     settings: {
       file_name: "",
       file_num: 1,
