@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -54,6 +54,12 @@
 					"name": "print-settings",
 					"pathName": "pages/print-settings/print-settings",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sle-consignee",
+					"pathName": "pages/sle-consignee/sle-consignee",
+					"scene": null
 				}
 			]
 		}

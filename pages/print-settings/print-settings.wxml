@@ -1,17 +1,17 @@
 <!--pages/print-settings/print-settings.wxml-->
 <view class='contain'>
   <!-- 文件 -->
-  <view class='file-contain'>
+  <view class='file-contain' catchtap='to_upload_file_page'>
     <view class='label-title'>文件</view>
     <view class='hr'></view>
-    <view class='a-file row-in space-in' catchtap='file_change'>
+    <view class='a-file row-in space-in'>
       <image class='file-img' src='/static/icon/file-type-{{file_type}}.png'></image>
       <view class='file-name'>{{file_name}}</view>
       <image class='show-sle' src='/static/icon/enter.png'></image>
     </view>
   </view>
   <!-- 店铺 -->
-  <view class='shop-contain'>
+  <view class='shop-contain' catchtap='to_sle_shop_page'>
     <view class='label-title'>店铺</view>
     <view class='hr'></view>
     <view class='shop row-in space-in'>
@@ -109,7 +109,7 @@
     </view>
     <view class='hr'></view>
     <!-- 收件人 -->
-    <view class='consignee-sle row-in space-in' catchtap='consignee_change'>
+    <view class='consignee-sle row-in space-in' catchtap='to_sle_consignee_page'>
       <view class='consignee column-in space-no'>
         <view class='consignee-top row-in space-in'>
           <image class='setting-icon' src='/static/icon/consignee.png'></image>

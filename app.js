@@ -52,7 +52,7 @@ App({
         that.globalData.rpx_to_px = res.screenWidth / 750
       }
     })
-    console.log(this.globalData.rpx_to_px)
+    //console.log(this.globalData.rpx_to_px)
   },
 
   globalData: {

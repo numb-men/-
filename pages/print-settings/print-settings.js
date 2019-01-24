@@ -91,8 +91,15 @@ Page({
     }
   },
 
-  file_change: function() {
-
+  onShow: function (){
+    try{
+      var consignee_ = wx.getStorageSync('sle-consignee')
+      if (consignee_){
+        this.setData({
+          consignee: consignee_
+        })
+      }
+    }catch(e){}
   },
 
   paper_size_change: function(e) {
@@ -163,10 +170,6 @@ Page({
     })
   },
 
-  consignee_change: function(e) {
-    
-  },
-
   comment_change: function(e) {
     var settings = this.data.settings
     settings.comment = e.detail.value
@@ -176,6 +179,20 @@ Page({
   },
 
   to_sle_shop_page: function() {
+    wx.navigateTo({
+      url: '../sle-shop/sle-shop',
+    })
+  },
 
+  to_upload_file_page: function() {
+    wx.navigateTo({
+      url: '../upload-file/upload-file',
+    })
+  },
+
+  to_sle_consignee_page: function() {
+    wx.navigateTo({
+      url: '../sle-consignee/sle-consignee',
+    })
   }
 })
