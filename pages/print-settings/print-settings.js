@@ -71,7 +71,7 @@ Page({
   },
 
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   file_change: function() {

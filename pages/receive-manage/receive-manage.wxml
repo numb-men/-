@@ -6,9 +6,9 @@
   <modal title="确认删除吗？" hidden="{{!isdelete}}" confirm-text="确定"
           cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
   </modal>
-  <view wx:for="{{order_list}}">
+  <view wx:for="{{order_list}}" wx:key="*this">
     <!-- 订单子项包围 -->
-    <view class='order-item-contain row-in space-ar' wx:key="*this">
+    <view class='order-item-contain row-in space-ar'>
       <!-- 左侧样式 -->
       <view class='left-style column-in space-in'>
         <view class='left-style-ends'></view>

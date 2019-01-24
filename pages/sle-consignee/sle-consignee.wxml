@@ -1,5 +1,15 @@
 <!--pages/sle-consignee/sle-consignee.wxml-->
 <view class='consignee-list' wx:for='{{consignee_list}}' wx:key="*this">
   <view class='a-consignee'>
+    <view class='top row-in space-in'>
+      <image class='icon' src='/static/icon/position-type-normal.png'></image>
+      <view class='default' wx:if='{{item.is_default}}'>默认地址</view>
+      <view class='name'>{{item.name}}</view>
+      <view class='phone'></view>
+    </view>
+    <view class='bottom row-in space-in'>
+      <view class='addr'>{{item.addr}}</view>
+      <image class='whether-sle' src='/static/icon/{{item.seleted?"in-sle":"un-sle"}}.png'></image>
+    </view>
   </view>
 </view>

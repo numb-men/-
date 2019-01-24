@@ -1,0 +1,3 @@
+<!--pages/upload-file/upload-file.wxml-->
+<web-view src="http://www.finalexam.cn/print/view/link/upload_file?openId=oEKuZ5R0Wf1vABqk" bindmessage="bindmsg">
+</web-view>

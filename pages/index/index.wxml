@@ -48,7 +48,7 @@
 <!-- 打印类型选择 -->
 <view class="print-type-sle border-f7">
   <!-- 文件打印 -->
-  <view class="print-type-sle-item row-in border-f7">
+  <view class="print-type-sle-item row-in border-f7" catchtap='to_upload_file_page'>
     <image class='print-type-icon' src='/static/icon/print-type-file.png'></image>
     <view class='column-in space-ar'>
       <view class='print-type-name'>文件打印</view>

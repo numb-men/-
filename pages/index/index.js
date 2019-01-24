@@ -80,4 +80,10 @@ Page({
       url: '../upload-pic/upload-pic',
     })
   },
+
+  to_upload_file_page: function() {
+    wx.navigateTo({
+      url: '../upload-file/upload-file',
+    })
+  }
 })

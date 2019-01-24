@@ -10,7 +10,8 @@
     "pages/receive-manage/receive-manage",
     "pages/print-settings/print-settings",
     "pages/sle-shop/sle-shop",
-    "pages/sle-consignee/sle-consignee"
+    "pages/sle-consignee/sle-consignee",
+    "pages/upload-file/upload-file"
   ],
   "window": {
     "navigationBarBackgroundColor": "#343131",
