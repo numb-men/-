@@ -16,11 +16,37 @@
 .name{
   float: left;
   margin-left: 5rpx;
+  width: 600rpx;
+  display: inline;
 }
 
 .phone{
   float: left;
   margin-left: 5rpx;
+  width: 450rpx;
+  display: inline;
+}
+
+.warning{
+  width: 250rpx;
+  float: right;
+  display: inline;
+}
+
+.warnIcon{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+  float: left;
+  margin-right: 15rpx;
+}
+
+.warnText{
+  font-size: 25rpx;
+  display: inline;
+  float: left;
+  width: 135rpx;
+  padding-top: 14rpx;
 }
 
 .section{
@@ -68,6 +94,11 @@
 .detail_position_input{
   padding-left: 20rpx;
   padding-top: 8rpx;
+  height: 100rpx;
+}
+
+.detail_position_input_text{
+  height: 100rpx;
 }
 
 .space{
