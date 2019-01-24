@@ -31,27 +31,6 @@ Page({
         is_default: false,
         seleted: false,
       },
-      {
-        name: '张三1',
-        phone: '1234567890',
-        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
-        is_default: true,
-        seleted: true,
-      },
-      {
-        name: '张三2',
-        phone: '1234567890',
-        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
-        is_default: false,
-        seleted: false,
-      },
-      {
-        name: '张三1',
-        phone: '1234567890',
-        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
-        is_default: true,
-        seleted: true,
-      },
     ],
     contain_style: ""
   },
@@ -69,6 +48,17 @@ Page({
         contain_style: "padding-bottom: 160rpx;"
       })
     }
+  },
+
+  //编辑事件
+  edit_it: function(e){
+    var index = e.currentTarget.id
+    try {
+      wx.setStorageSync('edit-consignee', consignee_list_[index])
+    } catch (e) {}
+    wx.navigateTo({
+      url: '../add-position/add-position',
+    })
   },
 
   //选择事件

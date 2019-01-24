@@ -3,7 +3,7 @@
   style='{{contain_style}}'>
   <view class='consignee-list'>
     <view wx:for='{{consignee_list}}' wx:key="*this">
-      <view class='a-consignee'>
+      <view class='a-consignee' catchtap='edit_it'>
         <view class='top row-in'>
           <image class='icon' src='/static/icon/position-type-normal.png'></image>
           <view class='default' wx:if='{{item.is_default}}'>默认</view>
