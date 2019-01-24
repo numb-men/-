@@ -22,6 +22,11 @@ Page({
     init_detail: "",
 
     contain_style:0,
+
+    //显示警告图标
+    warnShow:'none',
+    warnText:'',
+    isSave:true,
   },
   
   //收件人
@@ -35,6 +40,37 @@ Page({
   humanPhone:function(e){
     this.setData({
       phone: e.detail.value
+    })
+  },
+
+  //检验手机号是否合法
+  checkPhone:function(e){
+    var value = e.detail.value;
+    var length = parseInt(value.length);
+
+    if (length != 11) {
+      this.setData({
+        warnShow: "inline",
+        warnText:"长度应为11",
+        isSave:false,
+      })
+      return;
+    }
+    else{
+      for(var i=0;i<length;i++){
+        if (value[i] < '0' || value[i] > '9'){
+          this.setData({
+            warnShow: "inline",
+            warnText: "手机号有误",
+            isSave: false,
+          })
+          return;
+        }
+      }
+    }
+    this.setData({
+      warnShow: "none",
+      isSave: true,
     })
   },
 
@@ -69,8 +105,29 @@ Page({
     }
   },
 
+  modalBindaconfirm:function(){
+    this.setData({
+      isSaveShow: false
+    })
+  },
+
   //保存
   savePosition:function(e){
+    if(this.data.isSave){
+      //保存
+    }
+    else{
+      wx.showModal({
+        title: '提示',
+        content: '信息有误！',
+        showCancel:false,
+        success: function (res) {
+          if (res.confirm) {
+            
+          } 
+        }
+      })
+    }
     console.log(this.data.name);
     console.log(this.data.phone);
     console.log(this.data.province);
