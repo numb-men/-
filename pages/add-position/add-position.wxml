@@ -1,16 +1,21 @@
 <!--pages/add-position/add-position.wxml-->
 <view class='body' style='{{contain_style}}'>
   <view class="position-human">
-    
     <view>
-      <input name='human_name' bindinput='humanName' placeholder="收件人" value='{{init_name}}'/>
+      <input name='human_name' class='name' bindinput='humanName' placeholder="收件人" value='{{init_name}}' maxlength='15'/>
     </view>
   </view>
 
   <view class="position-human">
   
     <view>
-      <input name='human_phone' bindinput='humanPhone' placeholder="手机电话" value='{{init_phone}}'/>
+      <input class='phone' name='human_phone' bindinput='humanPhone' placeholder="手机电话" value='{{init_phone}}' bindblur='checkPhone' maxlength='11'/>
+
+      <view style='display:{{warnShow}};' class='warning'>
+        <image class='warnIcon'  src="/static/icon/warn.png">                        </image>
+        <view class='warnText'>{{warnText}}</view>
+      </view>
+      
     </view>
   </view>
   
@@ -32,7 +37,7 @@
 
   <view class='detail-position'>
     <view class='detail_position_input'>
-      <input bindinput='detail_position' placeholder="详细地址" value='{{init_detail}}'/>
+      <textarea class='detail_position_input_text' bindinput='detail_position' placeholder="详细地址" value='{{init_detail}}'></textarea>
     </view>
   </view>
   <view class='space'></view>
