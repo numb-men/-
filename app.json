@@ -1,54 +1,56 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/map/map",
-        "pages/user/user",
-        "pages/order-list/order-list",
-        "pages/order-detail/order-detail",
-        "pages/upload-pic/upload-pic",
-        "pages/add-position/add-position",
-        "pages/receive-manage/receive-manage",
-        "pages/print-settings/print-settings"
-    ],
-    "window": {
-        "navigationBarBackgroundColor": "#343131",
-        "navigationBarTextStyle": "white",
-        "navigationBarTitleText": "趣印",
-        "backgroundColor": "#fff",
-        "backgroundTextStyle": "dark"
-    },
-    "tabBar": {
-        "color": "#343131",
-        "selectedColor": "#ffcc00",
-        "boderStyle": "white",
-        "backgroundColor": "white",
-        "position": "bottom",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "/static/icon/index.png",
-                "selectedIconPath": "/static/icon/index-sle.png"
-            },
-            {
-                "pagePath": "pages/map/map",
-                "text": "发现",
-                "iconPath": "/static/icon/map.png",
-                "selectedIconPath": "/static/icon/map-sle.png"
-            },
-            {
-                "pagePath": "pages/user/user",
-                "text": "我的",
-                "iconPath": "/static/icon/user.png",
-                "selectedIconPath": "/static/icon/user-sle.png"
-            }
-        ]
-    },
-    "debug": true,
-    "networkTimeout": {
-        "request": 10000,
-        "connectSocket": 10000,
-        "uploadFile": 10000,
-        "downloadFile": 10000
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/user/user",
+    "pages/order-list/order-list",
+    "pages/order-detail/order-detail",
+    "pages/upload-pic/upload-pic",
+    "pages/add-position/add-position",
+    "pages/receive-manage/receive-manage",
+    "pages/print-settings/print-settings",
+    "pages/sle-shop/sle-shop",
+    "pages/sle-consignee/sle-consignee"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#343131",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "趣印",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#343131",
+    "selectedColor": "#ffcc00",
+    "boderStyle": "white",
+    "backgroundColor": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/icon/index.png",
+        "selectedIconPath": "/static/icon/index-sle.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "发现",
+        "iconPath": "/static/icon/map.png",
+        "selectedIconPath": "/static/icon/map-sle.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/static/icon/user.png",
+        "selectedIconPath": "/static/icon/user-sle.png"
+      }
+    ]
+  },
+  "debug": true,
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
 }

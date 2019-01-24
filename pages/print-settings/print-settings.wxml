@@ -108,7 +108,7 @@
       </radio-group>
     </view>
     <view class='hr'></view>
-    <!-- 取件人 -->
+    <!-- 收件人 -->
     <view class='consignee-sle row-in space-in' catchtap='consignee_change'>
       <view class='consignee column-in space-no'>
         <view class='consignee-top row-in space-in'>

@@ -1,0 +1,5 @@
+<!--pages/sle-consignee/sle-consignee.wxml-->
+<view class='consignee-list' wx:for='{{consignee_list}}' wx:key="*this">
+  <view class='a-consignee'>
+  </view>
+</view>

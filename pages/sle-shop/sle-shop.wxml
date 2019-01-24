@@ -1,0 +1,6 @@
+<!--pages/sle-shop/sle-shop.wxml-->
+<view class='shop-list' wx:for='{{shop_list}}'  wx:key="*this">
+  <view class='a-shop'>
+  
+  </view>
+</view>
