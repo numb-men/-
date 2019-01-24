@@ -5,7 +5,7 @@
     <view class='label-title'>文件</view>
     <view class='hr'></view>
     <view class='a-file row-in space-in' catchtap='file_change'>
-      <image class='file-img' src='{{file_img}}'></image>
+      <image class='file-img' src='/static/icon/file-type-{{file_type}}.png'></image>
       <view class='file-name'>{{file_name}}</view>
       <image class='show-sle' src='/static/icon/enter.png'></image>
     </view>

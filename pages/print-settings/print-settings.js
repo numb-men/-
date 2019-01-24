@@ -2,7 +2,7 @@
 Page({
 
   data: {
-    file_img: "/static/icon/file-type-doc.png",
+    file_type: "unkown",
     file_name: "福州大学实验报告1.doc",
     sigle_double_page: [
       {
@@ -45,7 +45,7 @@ Page({
       shop_img: "/static/icon/shop-head-img.png",
       shop_name: "八号楼鸿鑫打印店",
       shop_distance: "1.2",
-      shop_addr: "上街镇福州大学生活一区8号楼楼下"
+      shop_addr: "闽侯县上街镇福州大学生活一区8号楼楼下"
     },
     settings: {
       file_name: "",
@@ -72,6 +72,23 @@ Page({
 
   onLoad: function (options) {
     console.log(options)
+    if ("fileName" in options){
+      //取得文件名和文件类型
+      var spl = options.fileName.split('.')
+      var type = "unknow"
+      if (spl.length > 1){
+        if (spl[spl.length - 1] in { doc: '', pdf: '', xls: '' }){
+          type = spl[spl.length - 1]
+        }
+        if (spl[spl.length - 1] in { jpg:'', png:'' }){
+          type = "pic"
+        }
+      }
+      this.setData({
+        file_name: options.fileName,
+        file_type: type
+      })
+    }
   },
 
   file_change: function() {

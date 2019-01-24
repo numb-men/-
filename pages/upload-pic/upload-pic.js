@@ -61,7 +61,7 @@ Page({
 
   to_print_settings_page: function () {
     wx.navigateTo({
-      url: '../print-settings/print-settings',
+      url: '../print-settings/print-settings?fileName=福州大学实验报告1.doc',
     })
   },
 })

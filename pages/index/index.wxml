@@ -49,7 +49,7 @@
 <view class="print-type-sle border-f7">
   <!-- 文件打印 -->
   <view class="print-type-sle-item row-in border-f7" catchtap='to_upload_file_page'>
-    <image class='print-type-icon' src='/static/icon/print-type-file.png'></image>
+    <image class='print-type-icon' src='/static/icon/file-type-file.png'></image>
     <view class='column-in space-ar'>
       <view class='print-type-name'>文件打印</view>
       <view class='print-type-describe'>
@@ -59,7 +59,7 @@
   </view>
   <!-- 图片打印 -->
   <view class="print-type-sle-item row-in border-f7" catchtap='to_upload_pic_page'>
-    <image class='print-type-icon' src='/static/icon/print-type-img.png'></image>
+    <image class='print-type-icon' src='/static/icon/file-type-pic.png'></image>
     <view class='column-in space-ar'>
       <view class='print-type-name'>图片打印</view>
       <view class='print-type-describe'>
@@ -69,7 +69,7 @@
   </view>
   <!-- 证件打印 -->
   <view class="print-type-sle-item row-in border-f7" catchtap='to_upload_pic_page'>
-    <image class='print-type-icon' src='/static/icon/print-type-credentials.png'></image>
+    <image class='print-type-icon' src='/static/icon/file-type-credentials.png'></image>
     <view class='column-in space-ar'>
       <view class='print-type-name'>证件打印</view>
       <view class='print-type-describe'>
@@ -79,7 +79,7 @@
   </view>
   <!-- 敬请期待 -->
   <view class="print-type-sle-item row-in border-f7">
-    <image class='print-type-icon' src='/static/icon/print-type-more.png'></image>
+    <image class='print-type-icon' src='/static/icon/file-type-unkown.png'></image>
     <view class='column-in space-ar'>
       <view class='print-type-name'>更多类型</view>
       <view class='print-type-describe'>
