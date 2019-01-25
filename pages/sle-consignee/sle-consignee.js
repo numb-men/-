@@ -31,13 +31,41 @@ Page({
         is_default: false,
         seleted: false,
       },
+      {
+        name: '张三1',
+        phone: '1234567890',
+        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
+        is_default: true,
+        seleted: true,
+      },
+      {
+        name: '张三2',
+        phone: '1234567890',
+        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
+        is_default: false,
+        seleted: false,
+      },
+      {
+        name: '张三3',
+        phone: '1234567890',
+        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
+        is_default: false,
+        seleted: false,
+      },
+      {
+        name: '张三4',
+        phone: '1234567890',
+        addr: '福建省福州市闽侯县上街镇福州大学生活一区6# 308',
+        is_default: false,
+        seleted: false,
+      },
     ],
     contain_style: ""
   },
 
   onLoad: function (options) {
     // 屏幕适配
-    if ((this.data.consignee_list.length + 1) * 160 * app.globalData.rpx_to_px
+    if ((this.data.consignee_list.length) * 200 * app.globalData.rpx_to_px
       < app.globalData.screenHeight - 60){
       this.setData({
         contain_style: "height:" + (app.globalData.screenHeight - 60) + "px;"
@@ -57,7 +85,7 @@ Page({
       wx.setStorageSync('edit-consignee', consignee_list_[index])
     } catch (e) {}
     wx.navigateTo({
-      url: '../add-position/add-position',
+      url: '../add-position/add-position?type=edit',
     })
   },
 
@@ -79,6 +107,12 @@ Page({
     }catch(e){}
     wx.navigateBack({
       delta: 1
+    })
+  },
+
+  add: function(){
+    wx.navigateTo({
+      url: '../add-position/add-position?type=add',
     })
   }
 })

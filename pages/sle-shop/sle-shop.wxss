@@ -1,1 +1,124 @@
 /* pages/sle-shop/sle-shop.wxss */
+.contain {
+  background: #f6f4f7;
+}
+.shop-list {
+  background: #fefefe;
+}
+.a-shop {
+  padding: 15rpx 25rpx;
+}
+.top {
+}
+.shop-head-img {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 5rpx;
+  margin-right: 15rpx;
+  border-radius: 50%;
+}
+.shop-rest {
+  background: #c9c9c9;
+  font-size: 28rpx;
+  color: #fefefe;
+  line-height: 50rpx;
+  padding: 0 10rpx;
+  margin: 10rpx 0;
+  border-radius: 7rpx;
+  border: 0.2rpx solid #c9c9c9;
+}
+.shop-open{
+  background: #58f158;
+  font-size: 28rpx;
+  color: #fefefe;
+  line-height: 50rpx;
+  padding: 0 10rpx;
+  margin: 10rpx 0;
+  border-radius: 7rpx;
+  border: 0.2rpx solid #c9c9c9;
+}
+.shop-name {
+  width: 300rpx;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  margin-left: 15rpx;
+  font-weight: bold;
+}
+.location-icon {
+  width: 35rpx;
+  height: 35rpx;
+  padding: 17.5rpx 5rpx;
+}
+.shop-distance {
+  font-size: 25rpx;
+  line-height: 70rpx;
+  color: #666666;
+  font-weight: bold;
+}
+.center {
+}
+.shop-order-num {
+  font-size: 23rpx;
+  line-height: 60rpx;
+  padding-left: 75rpx;
+}
+.shop-rave-reviews {
+  font-size: 23rpx;
+  line-height: 60rpx;
+}
+.shop-opening-time {
+  font-size: 23rpx;
+  line-height: 60rpx;
+}
+.shop-addr {
+  font-size: 23rpx;
+  line-height: 60rpx;
+  width: 525rpx;
+  padding-left: 75rpx;
+  color: #666666;
+}
+.whether-sle {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 10rpx;
+  margin-top: 40rpx;
+}
+.tag-box {
+  width: 450rpx;
+  padding-left: 55rpx;
+}
+.tag-item {
+  border: 0.2rpx solid #c9c9c9;
+  border-radius: 3rpx;
+  font-size: 20rpx;
+  color: #343131;
+  padding: 5rpx 7.5rpx;
+  margin:10rpx 7rpx;
+}
+.sle-it {
+  width: 750rpx;
+  background: #fefefe;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #343131;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  border-top: 0.2rpx solid #f6f4f7;
+}
+.hr {
+  width: 100%;
+  height: 7rpx;
+  color: #f6f4f7;
+  margin: 10rpx 0;
+}
+.divide-symbol {
+  font-size: 23rpx;
+  color: #666666;
+  line-height: 60rpx;
+  padding: 0 7rpx;
+  margin-right: 15rpx;
+}

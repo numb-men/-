@@ -16,11 +16,17 @@
     <view class='hr'></view>
     <view class='shop row-in space-in'>
       <view class='shop-left column-in space-in'>
-        <view class='row-in'>
-          <image class='shop-img' src='{{shop.shop_img}}'></image>
-          <view class='shop-name'>{{shop.shop_name}}</view>
-          <image class='location-icon' src='/static/icon/location.png'></image>
-          <view class='distance'>{{shop.shop_distance}} km</view>
+        <view class='row-in space-in'>
+          <view class='row-in'>
+            <image class='shop-head-img' src='{{shop.shop_head_img}}'></image>
+            <view class='shop-rest' wx:if='{{!item.shop_is_open}}'>休息中</view>
+            <view class='shop-open' wx:else>营业中</view>
+            <view class='shop-name'>{{shop.shop_name}}</view>
+          </view>
+          <view class='row-in'>
+            <image class='location-icon' src='/static/icon/location.png'></image>
+            <view class='shop-distance'>{{shop.shop_distance}} km</view>
+          </view>
         </view>
         <view class='shop-addr'>{{shop.shop_addr}}</view>
       </view>

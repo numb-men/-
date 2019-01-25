@@ -58,10 +58,6 @@ Page({
     ],
     contain_style : ""
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     var order_list_height = this.data.order_list.length * 220 * app.globalData.rpx_to_px
     //console.log(order_list_height, app.globalData.screenHeight)

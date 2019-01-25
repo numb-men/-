@@ -42,10 +42,22 @@ Page({
     comment: "",
     comment_p: "备注信息..",
     shop: {
-      shop_img: "/static/icon/shop-head-img.png",
-      shop_name: "八号楼鸿鑫打印店",
-      shop_distance: "1.2",
-      shop_addr: "闽侯县上街镇福州大学生活一区8号楼楼下"
+      shop_head_img: "/static/icon/shop-head-img.png",
+      shop_name: "超人文印",
+      shop_is_open: true,
+      shop_distance: 1.2,
+      shop_order_num: 123,
+      shop_rave_reviews: 92.2,
+      shop_open_time: "8:00",
+      shop_rest_time: "20:00",
+      shop_addr: "闽侯县上街镇福州大学生活一区8号楼楼下",
+      shop_is_sle: false,
+      shop_tag_list: [
+        "黑白",
+        "彩印",
+        "自取",
+        "配送"
+      ]
     },
     settings: {
       file_name: "",
@@ -94,9 +106,15 @@ Page({
   onShow: function (){
     try{
       var consignee_ = wx.getStorageSync('sle-consignee')
+      var shop_ = wx.getStorageSync('sle-shop')
       if (consignee_){
         this.setData({
           consignee: consignee_
+        })
+      }
+      if (shop_){
+        this.setData({
+          shop: shop_
         })
       }
     }catch(e){}

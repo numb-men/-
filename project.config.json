@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -59,6 +59,13 @@
 					"id": -1,
 					"name": "sle-consignee",
 					"pathName": "pages/sle-consignee/sle-consignee",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "sle-shop",
+					"pathName": "pages/sle-shop/sle-shop",
 					"scene": null
 				}
 			]

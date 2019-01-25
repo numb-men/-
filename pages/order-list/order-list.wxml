@@ -29,8 +29,8 @@
         <view class='order-item-bottom row-in space-in'>
           <!-- 标签盒 -->
           <view class='tag-box row-in space-no'>
-            <view wx:for="{{item.tag_list}}">
-              <view class='tag-item' wx:key="*this">
+            <view wx:for="{{item.tag_list}}" wx:key="*this">
+              <view class='tag-item'>
                 {{item}}
               </view>
             </view>
