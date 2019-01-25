@@ -24,35 +24,35 @@ Page({
     contain_style:0,
 
     //显示警告图标
-    warnShow:'none',
-    warnText:'',
-    isSave:true,
+    warn_show:'none',
+    warn_text:'',
+    is_save:true,
   },
   
   //收件人
-  humanName:function(e){
+  human_name:function(e){
     this.setData({
       name: e.detail.value
     })
   },
 
   //手机号
-  humanPhone:function(e){
+  human_phone:function(e){
     this.setData({
       phone: e.detail.value
     })
   },
 
   //检验手机号是否合法
-  checkPhone:function(e){
+  check_phone:function(e){
     var value = e.detail.value;
     var length = parseInt(value.length);
 
     if (length != 11) {
       this.setData({
-        warnShow: "inline",
-        warnText:"长度应为11",
-        isSave:false,
+        warn_show: "inline",
+        warn_text:"长度应为11",
+        is_save:false,
       })
       return;
     }
@@ -60,22 +60,22 @@ Page({
       for(var i=0;i<length;i++){
         if (value[i] < '0' || value[i] > '9'){
           this.setData({
-            warnShow: "inline",
-            warnText: "手机号有误",
-            isSave: false,
+            warn_show: "inline",
+            warn_text: "手机号有误",
+            is_save: false,
           })
           return;
         }
       }
     }
     this.setData({
-      warnShow: "none",
-      isSave: true,
+      warn_show: "none",
+      is_save: true,
     })
   },
 
   //省市区
-  bindRegionChange: function (e) {
+  bind_region_change: function (e) {
     this.setData({
       province: e.detail.value[0],
       city: e.detail.value[1],
@@ -91,7 +91,8 @@ Page({
     })
   },
 
-  checkboxChange(e) {
+  //设置默认地址
+  checkbox_change(e) {
     if (e.detail.value.length==0){
       this.setData({
         default_position : false
@@ -105,15 +106,9 @@ Page({
     }
   },
 
-  modalBindaconfirm:function(){
-    this.setData({
-      isSaveShow: false
-    })
-  },
-
   //保存
-  savePosition:function(e){
-    if(this.data.isSave){
+  save_position:function(e){
+    if(this.data.is_save){
       //保存
     }
     else{

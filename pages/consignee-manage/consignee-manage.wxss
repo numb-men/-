@@ -1,4 +1,4 @@
-/* pages/receive-manage/receive-manage.wxss */
+/* pages/consignee-manage/consignee-manage.wxss */
 
 .order-list {
   padding: 25rpx 15rpx;

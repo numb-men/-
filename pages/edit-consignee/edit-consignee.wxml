@@ -1,30 +1,30 @@
 <!--pages/add-position/add-position.wxml-->
+<!--编辑地址body-->
 <view class='body' style='{{contain_style}}'>
+  <!--收件人-->
   <view class="position-human">
     <view>
-      <input name='human_name' class='name' bindinput='humanName' placeholder="收件人" value='{{init_name}}' maxlength='15'/>
+      <input name='human_name' class='name' bindinput='human_name' placeholder="收件人" value='{{init_name}}' maxlength='15'/>
     </view>
   </view>
-
+  <!--联系电话-->
   <view class="position-human">
-  
     <view>
-      <input class='phone' name='human_phone' bindinput='humanPhone' placeholder="手机电话" value='{{init_phone}}' bindblur='checkPhone' maxlength='11'/>
-
-      <view style='display:{{warnShow}};' class='warning'>
-        <image class='warnIcon'  src="/static/icon/warn.png">                        </image>
-        <view class='warnText'>{{warnText}}</view>
+      <input class='phone' name='human_phone' bindinput='human_phone' placeholder="手机电话" value='{{init_phone}}' bindblur='check_phone' maxlength='11'/>
+      <!--手机号格式错误提示-->
+      <view style='display:{{warn_show}};' class='warning'>
+        <image class='warn-icon'  src="/static/icon/warn.png">                               </image>
+        <view class='warn-text'>{{warn_text}}</view>
       </view>
-      
     </view>
   </view>
-  
-   <view class='line-sapce'></view>
-
+  <!--分割线-->
+  <view class='line-sapce'></view>
+  <!--地址选择-->
   <view class="section">
     <view class="section__title">所在地区:   </view>
     <view class="picker">
-      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <picker mode="region" bindchange="bind_region_change" value="{{region}}" custom-item="{{customItem}}">
         <view>
           {{region[2]}}
         </view>
@@ -34,23 +34,25 @@
     <image class='icon' src='/static/icon/enter.png'></image>
     </view>
   </view>
-
+  <!--详细地址填写-->
   <view class='detail-position'>
     <view class='detail_position_input'>
       <textarea class='detail_position_input_text' bindinput='detail_position' placeholder="详细地址" value='{{init_detail}}'></textarea>
     </view>
   </view>
+  <!--分割线-->
   <view class='space'></view>
-
+  <!--设置默认地址-->
   <view class='default-position'>
-    <checkbox-group bindchange="checkboxChange">
+    <checkbox-group bindchange="checkbox_change">
       <label class="checkbox">
         <checkbox value="0" checked='true'/>
         设为默认地址
       </label>
     </checkbox-group>
   </view>
-  <view class='save' bindtap='savePosition'>
+  <!--保存地址-->
+  <view class='save' bindtap='save_position'>
     保存
   </view>
 </view>

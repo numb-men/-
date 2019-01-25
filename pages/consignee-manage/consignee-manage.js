@@ -1,4 +1,4 @@
-// pages/receive-manage/receive-manage.js
+// pages/consignee-manage/consignee-manage.js
 var app = getApp()
 Page({
   /**
@@ -7,10 +7,10 @@ Page({
   data: {
     //判断是否删除（显示对话框）
     isdelete:false,
-
+    //控制body样式
     contain_style:0,
-
-    order_list: [
+    //地址信息
+    address_list: [
       {
         id:0,
         position_type: "default",
@@ -46,18 +46,16 @@ Page({
       },
     ]
   },
-
   //编辑地址
   edit_position:function(e){
     var index = e.currentTarget.dataset.text;
     wx.navigateTo({
-      url: '../add-position/add-position?name=' + this.data.order_list[index].human_name + "&phone=" + this.data.order_list[index].human_phone + "&province=" + this.data.order_list[index].province + "&city=" + this.data.order_list[index].city + "&country=" + this.data.order_list[index].country + "&detail_position=" + this.data.order_list[index].detail_position,
+      url: '../edit-consignee/edit-consignee?name=' + this.data.address_list[index].human_name + "&phone=" + this.data.address_list[index].human_phone + "&province=" + this.data.address_list[index].province + "&city=" + this.data.address_list[index].city + "&country=" + this.data.address_list[index].country + "&detail_position=" + this.data.address_list[index].detail_position,
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
     })
   },
-
   //删除地址
   delete_position:function(e){
     //对应子项的ID
@@ -67,35 +65,33 @@ Page({
     })
   },
   //确认删除
-  modalBindaconfirm:function(){
+  modal_bind_confirm:function(){
     //调用接口删除
     this.setData({
       isdelete: false
     })
-
   },
   //取消删除
-  modalBindcancel:function(){
+  modal_bind_cancel:function(){
     this.setData({
       isdelete: false
     })
   },
 
   //悬浮球点击事件
-  adddetial: function () {
+  add_detial: function () {
     wx.navigateTo({
-      url: '../add-position/add-position',
+      url: '../edit-consignee/edit-consignee',
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var position_list_height = this.data.order_list.length * 220 * app.globalData.rpx_to_px
+    var position_list_height = this.data.address_list.length * 220 * app.globalData.rpx_to_px
     //console.log(order_list_height, app.globalData.screenHeight)
     if (position_list_height + 75 < app.globalData.screenHeight) {
       var contain_height = app.globalData.screenHeight - 75

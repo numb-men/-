@@ -1,26 +1,28 @@
-<!--pages/receive-manage/receive-manage.wxml-->
-
-<!--pages/order-list/order-list.wxml-->
+<!--pages/consignee-manage/consignee-manage.wxml-->
+<!--收件管理的body-->
 <view class='order-list column-in' style='{{contain_style}}'>
   <!--删除确认的对话框-->
   <modal title="确认删除吗？" hidden="{{!isdelete}}" confirm-text="确定"
-          cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
+          cancel-text="取消" bindconfirm="modal_bind_confirm" bindcancel="modal_bind_cancel">
   </modal>
-  <view wx:for="{{order_list}}" wx:key="*this">
-    <!-- 订单子项包围 -->
-    <view class='order-item-contain row-in space-ar'>
+  <view wx:for="{{address_list}}">
+    <!-- 地址子项包围 -->
+    <view class='order-item-contain row-in space-ar' wx:key="*this">
       <!-- 左侧样式 -->
       <view class='left-style column-in space-in'>
         <view class='left-style-ends'></view>
         <view class='left-style-center'></view>
         <view class='left-style-ends'></view>
       </view>
-      <!-- 订单子项 -->
+      <!-- 地址子项 -->
       <view class='position-item column-in space-ar'>
-        <!-- 收件人以及联系电话 -->
+        <!-- 地址头部-->
         <view class='position-item-top row-in space-in'>
+          <!--默认地址图标-->
           <view wx:if="{{item.is_default}}"><image class='position-type' src="/static/icon/position-type-default.png"></image></view>
+          <!--普通地址图标-->
           <view wx:else><image class='position-type' src="/static/icon/position-type-normal.png"></image></view>
+          <!--收件人及电话-->
           <view class='human-name'>{{item.human_name}}</view>
           <view class='human-phone'>{{item.human_phone}}</view>
         </view>
@@ -31,6 +33,7 @@
           <view class='position-country'>{{item.country}}</view>
           <view class='detail-position'>{{item.detail_position}}</view>
         </view>
+        <!--分割线-->
         <view class='hr'></view>
         <!-- 地址操作栏 -->
         <view class='operation'>
@@ -41,12 +44,12 @@
           <image class='position-op-delete' src="/static/icon/delete.png" bindtap='delete_position' data-text="{{item.id}}"></image>
           <view class='position-delete' bindtap='delete_position' data-text="{{item.id}}">删除</view>
         </view>
-        
       </view>
     </view>
   </view>
 </view>
-<view bindtap='adddetial'>
+<!--悬浮球-->
+<view bindtap='add_detial'>
   <image class="add_icon" src="/static/icon/float-ball.png"></image>
 </view>
 

@@ -33,7 +33,7 @@
   display: inline;
 }
 
-.warnIcon{
+.warn-icon{
   width: 40rpx;
   height: 40rpx;
   padding: 10rpx;
@@ -41,7 +41,7 @@
   margin-right: 15rpx;
 }
 
-.warnText{
+.warn-text{
   font-size: 25rpx;
   display: inline;
   float: left;

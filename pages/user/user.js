@@ -80,9 +80,9 @@ Page({
     })
   },
 
-  to_receive_manage: function(){
+  to_consignee_manage: function(){
     wx.navigateTo({
-      url: '../receive-manage/receive-manage',
+      url: '../consignee-manage/consignee-manage',
     })
   }
 })
