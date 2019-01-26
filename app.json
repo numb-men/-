@@ -11,7 +11,8 @@
     "pages/print-settings/print-settings",
     "pages/sle-shop/sle-shop",
     "pages/sle-consignee/sle-consignee",
-    "pages/upload-file/upload-file"
+    "pages/upload-file/upload-file",
+    "pages/private-policy/private-policy"
   ],
   "window": {
     "navigationBarBackgroundColor": "#343131",

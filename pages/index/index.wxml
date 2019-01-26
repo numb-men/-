@@ -89,8 +89,8 @@
   </view>
   <!-- 隐私政策 -->
   <view class='privacy-policy row-in space-ar'>
-    <view class='private-policy-title'>隐私声明</view>
-    <image class="statement" src='/static/icon/statement.png'></image>
+    <view class='private-policy-title' catchtap='to_private_policy_page'>隐私声明</view>
+    <image class="statement" src='/static/icon/statement.png' catchtap='to_private_policy_page'></image>
   </view>
 </view>
 

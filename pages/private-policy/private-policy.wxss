@@ -1,0 +1,85 @@
+/* pages/private-policy/private-policy.wxss */
+.private-policy{
+  width: 750rpx;
+
+}
+
+.private-policy-head{
+  width: 750rpx;
+  height: 120rpx;
+
+}
+
+.private-policy-head-icon{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  float: left;
+}
+
+.private-policy-head-text-chinese{
+  margin-top:18rpx; 
+  width: 640rpx;
+  height: 40rpx;
+  float: left;
+  font-size: 34rpx;
+  font-style: italic;
+}
+
+.private-policy-head-text-english{
+  width: 640rpx;
+  height: 30rpx;
+  float: left;
+  font-size: 28rpx;
+  font-style: italic;
+}
+
+.private-policy-body{
+
+}
+
+.private-policy-body-title{
+text-align: center;
+font-size: 34rpx;
+font-weight: bold;
+margin-bottom: 20rpx;
+}
+
+.split{
+  height: 5rpx;
+  width: 670rpx;
+  margin: 22rpx 40rpx;
+  background:#f6f4f7;
+}
+
+.private-policy-body-main{
+}
+
+.private-policy-body-main-introduction{
+  font-size: 28rpx;
+  margin: 12rpx 40rpx;
+  line-height: 50rpx;
+}
+
+.section-1-title{
+  font-size: 32rpx;
+  margin-top: 30rpx;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.section-1-body{
+  font-size: 28rpx;
+  margin: 12rpx 40rpx;
+  line-height: 50rpx;
+}
+
+.section-1-body-part{
+  font-size: 28rpx;
+  margin-top: 0rpx;
+  margin-left:18rpx;
+  margin-right: 0rpx;
+  margin-bottom: 0rpx;
+}

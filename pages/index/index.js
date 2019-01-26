@@ -85,5 +85,11 @@ Page({
     wx.navigateTo({
       url: '../upload-file/upload-file',
     })
+  },
+
+  to_private_policy_page:function(){
+    wx.navigateTo({
+      url: '../private-policy/private-policy',
+    })
   }
 })
