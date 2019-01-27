@@ -1,85 +1,52 @@
 /* pages/private-policy/private-policy.wxss */
-.private-policy{
-  width: 750rpx;
-
+page{
+  background: #f6f4f7;
 }
-
-.private-policy-head{
-  width: 750rpx;
-  height: 120rpx;
-
+.private-policy {
+  margin: 15rpx 25rpx;
+  padding: 25rpx 35rpx;
+  background: #fefefe;
 }
-
-.private-policy-head-icon{
-  width: 70rpx;
-  height: 70rpx;
-  margin: 20rpx 20rpx 20rpx 20rpx;
-  float: left;
+.private-policy-head {
+  margin-bottom: 25rpx;
 }
-
-.private-policy-head-text-chinese{
-  margin-top:18rpx; 
-  width: 640rpx;
-  height: 40rpx;
-  float: left;
+.team-icon {
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 15rpx;
+}
+.team-label-cn {
+  line-height: 40rpx;
   font-size: 34rpx;
   font-style: italic;
 }
-
-.private-policy-head-text-english{
-  width: 640rpx;
-  height: 30rpx;
-  float: left;
-  font-size: 28rpx;
+.team-label-en {
+  font-size: 23rpx;
   font-style: italic;
+  line-height: 35rpx;
 }
-
-.private-policy-body{
-
-}
-
-.private-policy-body-title{
-text-align: center;
-font-size: 34rpx;
-font-weight: bold;
-margin-bottom: 20rpx;
-}
-
-.split{
-  height: 5rpx;
-  width: 670rpx;
-  margin: 22rpx 40rpx;
-  background:#f6f4f7;
-}
-
-.private-policy-body-main{
-}
-
-.private-policy-body-main-introduction{
-  font-size: 28rpx;
-  margin: 12rpx 40rpx;
-  line-height: 50rpx;
-}
-
-.section-1-title{
+.title {
   font-size: 32rpx;
-  margin-top: 30rpx;
-  margin-left:40rpx;
-  margin-right: 40rpx;
+  color: #343131;
   font-weight: bold;
+  line-height: 70rpx;
+  text-align: center;
   margin-bottom: 15rpx;
 }
-
-.section-1-body{
-  font-size: 28rpx;
-  margin: 12rpx 40rpx;
-  line-height: 50rpx;
+.private-policy-body {
+  margin-top: 20rpx;
 }
-
-.section-1-body-part{
+.private-policy-part {
+}
+.private-policy-part-title {
+  font-size: 30rpx;
+  color: #343131;
+  font-weight: bold;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+}
+.private-policy-part-content {
   font-size: 28rpx;
-  margin-top: 0rpx;
-  margin-left:18rpx;
-  margin-right: 0rpx;
-  margin-bottom: 0rpx;
+  color: #343131;
+  line-height: 50rpx;
 }

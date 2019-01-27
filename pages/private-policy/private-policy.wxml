@@ -1,96 +1,27 @@
 <!--pages/private-policy/private-policy.wxml-->
 <view class='private-policy'>
   <!--页面头部-->
-  <view class='private-policy-head'>
-    <image class="private-policy-head-icon" src='/static/icon/team.jpg'></image>
-    <view class='private-policy-head-text-chinese'>趣考网络</view>
-    <view class='private-policy-head-text-english'>QuKao Network</view>
+  <view class='private-policy-head row-in'>
+    <image class="team-icon" src='/static/icon/team.jpg'></image>
+    <view class='column-in'>
+      <view class='team-label-cn'>趣考网络</view>
+      <view class='team-label-en'>QuKao Network</view>
+    </view>
   </view>
 
-  <!--页面主体-->
+  <view class='title'>隐私声明</view>
+  <view class='hr'></view>
+
+  <!--声明内容-->
   <view class='private-policy-body'>
-    <view class='private-policy-body-title'>趣小印-隐私声明</view>
-    <view class='split'></view>
-    <view class='private-policy-body-main'>
-    <view class='private-policy-body-main-introduction'>
-      福州趣考网络科技有限公司（以下简称“趣考网络”）在此特别提醒您在成为用户之前，请认真阅读本《隐私声明》（以下简称“协议”），确保您充分理解本协议中各条款。请您审慎阅读并选择接受或不接受本协议。除非您接受本协议所有条款，否则您无权注册、登录或使用本协议所涉服务。您的注册、登录、使用等行为将视为对本协议的接受，并同意接受本协议各项条款的约束。
-本协议约定趣考网络与用户之间关于“期末考啦”软件服务（以下简称“服务”）的权利义务。“用户”是指注册、登录、使用本服务的个人。本协议可由趣考网络随时更新，更新后的协议条款一旦公布即代替原来的协议条款，恕不再另行通知，用户可在本网站查阅最新版协议条款。在趣考网络修改协议条款后，如果用户不接受修改后的条款，请立即停止使用趣考网络提供的服务，用户继续使用趣考网络提供的服务将被视为接受修改后的协议。
-    </view>
-
-    <view class='section-1-title'>一、帐号注册</view>
-    <view class='section-1-body'>
-    1、用户在使用本服务前需要注册一个“期末考啦”帐号。“期末考啦”帐号应当使用手机号码绑定注册，请用户使用尚未与“期末考啦”帐号绑定的手机号码，以及未被趣考网络根据本协议封禁的手机号码注册“期末考啦”帐号。趣考网络可以根据用户需求或产品需要对帐号注册和绑定的方式进行变更，而无须事先通知用户。
-    </view>
-    <view class='section-1-body'>
-2、鉴于“期末考啦”帐号的绑定注册方式，您同意趣考网络在注册时将使用您提供的手机号码及/或自动提取您的手机号码及自动提取您的手机设备识别码等信息用于注册。
-    </view>
-    <view class='section-1-body'>
-3、在用户注册及使用本服务时，趣考网络需要搜集能识别用户身份的个人信息以便趣考网络可以在必要时联系用户，或为用户提供更好的使用体验。趣考网络搜集的信息包括但不限于用户的昵称、性别、年龄、出生日期、联系方式、地址、学校情况、兴趣爱好、个人说明；趣考网络同意对这些信息的使用将受限于第三条用户个人隐私信息保护的约束。
-    </view>
-
-    <view class='section-1-title'>二、服务内容</view>
-    <view class='section-1-body'>
-    1、本服务的具体内容由趣考网络根据实际情况提供，包括但不限于授权用户通过其帐号进行上传资料、下载文件、发表动态、评价动态。趣考网络可以对其提供的服务予以变更，且趣考网络提供的服务内容可能随时变更；用户将会收到趣考网络关于服务变更的通知。
-    </view>
-    <view class='section-1-body'>
-2、趣考网络提供的服务包含免费服务与收费服务。用户可以通过付费方式购买收费服务，具体方式为：用户通过网上银行、支付宝或其他“期末考啦”平台提供的付费途径支付一定数额的人民币购买“期末考啦”平台的虚拟货币——趣币，然后根据趣考网络公布的资费标准以趣币购买用户欲使用的收费服务，从而获得收费服务使用权限。对于收费服务，趣考网络会在用户使用之前给予用户明确的提示，只有用户根据提示确认其同意按照前述支付方式支付费用并完成了支付行为，用户才能使用该等收费服务。支付行为的完成以银行或第三方支付平台生成“支付已完成”的确认通知为准。
-    </view>
-
-    <view class='section-1-title'>三、用户个人信息保护</view>
-    <view class='section-1-body'>
-   1、用户在注册帐号或使用本服务的过程中，可能需要填写或提交一些必要的个人信息，如法律法规、规章规范性文件（以下称“法律法规”）规定的需要填写的身份信息。如用户提交的信息不完整或不符合法律法规的规定，则用户可能无法使用本服务或在使用本服务的过程中受到限制。
-    </view>
-    <view class='section-1-body'>
-      2、用户个人信息包括：1）用户自行提供的用户个人信息（如注册时填写的手机号码，电子邮件等个人信息，使用服务时提供的共享信息等）；2）其他方分享的用户个人信息；3）趣考网络为提供服务而合法收集的用户必要个人信息（如使用服务时系统自动采集的设备或软件信息，浏览历史信息，通讯时间信息等技术信息，用户开启定位功能并使用服务时的地理位置信息等）。
-      其中个人隐私信息是指涉及用户个人身份或个人隐私的信息，比如，用户真实姓名、身份证号、手机号码、手机设备识别码、IP地址、用户聊天记录。非个人隐私信息是指用户对本服务的操作状态以及使用习惯等明确且客观反映在趣考网络服务器端的基本记录信息、个人隐私信息范围外的其它普通信息，以及用户同意公开的上述隐私信息。趣考网络保证在取得用户书面同意的情况下收集、使用或公开用户的个人隐私信息，用户同意趣考网络无需获得用户的另行确认与授权即可收集、使用或公开用户的非个人隐私信息。
-    </view>
-    <view class='section-1-body'>
-      3、尊重用户个人信息的私有性是趣考网络的一贯制度，趣考网络将采取技术措施和其他必要措         施，确保用户个人信息安全，防止在本服务中收集的用户个人信息泄露、毁损或丢失。在发生         前述情形或者趣考网络发现存在发生前述情形的可能时，趣考网络将及时采取补救措施并告知         用户，用户如发现存在前述情形亦需立即与趣考网络联系。
-    </view>
-    <view class='section-1-body'>
-    4、趣考网络未经用户同意不向任何第三方公开、 透露用户个人隐私信息。但以下特定情形除外：
-      <view class='section-1-body-part'>
-      (1) 趣考网络根据法律法规规定或有权机关的指示提供用户的个人隐私信息；
+    <view wx:for='{{private_policy_text}}' wx:key='*this'>
+      <view class='private-policy-part'>
+        <view class='private-policy-part-title'
+          wx:if='{{item.part_title != ""}}'>
+          {{item.part_title}}
+        </view>
+        <view class='private-policy-part-content'>{{item.part_content}}</view>
       </view>
-      <view class='section-1-body-part'>
-      (2) 由于用户将其用户密码告知他人或与他人共享注册帐户与密码，由此导致的任何个人信息的       泄漏，或其他非因趣考网络原因导致的个人隐私信息的泄露；
-      </view>
-      <view class='section-1-body-part'>
-      (3) 用户自行向第三方公开其个人隐私信息；
-      </view>
-      <view class='section-1-body-part'>
-      (4) 用户与趣考网络及合作单位之间就用户个人隐私信息的使用公开达成约定，趣考网络因此向       合作单位公开用户个人隐私信息；
-      </view>
-      <view class='section-1-body-part'>
-      (5) 任何由于黑客攻击、电脑病毒侵入及其他不可抗力事件导致用户个人隐私信息的泄露；
-      </view>
-      <view class='section-1-body-part'>
-      (6) 用户个人信息已经经过处理无法识别特定个人且不能复原。
-      </view>
-    </view>
-    <view class='section-1-body'>
-      5、用户同意趣考网络可在以下事项中使用用户的个人隐私信息：
-      <view class='section-1-body-part'>
-      (1) 趣考网络向用户及时发送重要通知，如软件更新、本协议条款的变更；
-      </view>
-      <view class='section-1-body-part'>
-      (2) 趣考网络内部进行审计、数据分析和研究等，以改进趣考网络的产品、服务和与用户之间的        沟通；
-      </view>
-      <view class='section-1-body-part'>
-      (3) 依本协议约定，趣考网络管理、审查用户信息及进行处理措施；
-      </view>
-      <view class='section-1-body-part'>
-      (4) 适用法律法规规定的其他事项。
-      除上述事项外，如未取得用户事先同意，趣考网络不会将用户个人隐私信息使用于任何其他用         途。
-      </view>
-    </view>
-    <view class='section-1-body'>
-    6、为了改善趣考网络的技术和服务，向用户提供更好的服务体验，趣考网络或可会自行收集使用      或向第三方提供用户的非个人隐私信息。
-    </view>
-    <view class='section-1-body'>
-    7、趣考网络保证在合法、正当与必要的原则下收集、使用或者公开用户个人信息且不会收集与提      供的服务无关的用户个人信息。
     </view>
   </view>
-  </view>
-
 </view>
