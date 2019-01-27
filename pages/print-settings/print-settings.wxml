@@ -19,7 +19,7 @@
         <view class='row-in space-in'>
           <view class='row-in'>
             <image class='shop-head-img' src='{{shop.shop_head_img}}'></image>
-            <view class='shop-rest' wx:if='{{!item.shop_is_open}}'>休息中</view>
+            <view class='shop-rest' wx:if='{{!shop.shop_is_open}}'>休息中</view>
             <view class='shop-open' wx:else>营业中</view>
             <view class='shop-name'>{{shop.shop_name}}</view>
           </view>

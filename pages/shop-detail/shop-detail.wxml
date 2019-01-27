@@ -1,0 +1,113 @@
+<!--pages/shop-detail/shop-detail.wxml-->
+<view class='contain'>
+  <!-- 顶部区域 -->
+  <view class='top'>
+    <!-- 背景图片 -->
+    <image class='top-bgimg' src='/static/pic/user-bg2.jpg'></image>
+    <view class='top-top row-in space-in'>
+      <image class='shop-head-img' src='{{shop.shop_head_img}}'></image>
+      <view class='column-in space-in'>
+        <view class='row-in'>
+          <view class='shop-rest' wx:if='{{!item.shop_is_open}}'>休息中</view>
+          <view class='shop-open' wx:else>营业中</view>
+          <view class='shop-name'>{{shop.shop_name}}</view>
+        </view>
+        <view class='hr'></view>
+        <view class='shop-addr'>{{shop.shop_addr}}</view>
+      </view>
+    </view>
+    <!-- 信誉、好评 -->
+    <view class='top-center row-in space-ar'>
+      <view class='shop-credit'>信誉 {{shop.shop_credit}}</view>
+      <view class='shop-rave-reviews'>好评率 {{shop.shop_rave_reviews}}%</view>
+      <view class='shop-order-num'>已打印 {{shop.shop_order_num}}单</view>
+      <view class='shop-delivery'>{{shop.shop_delivery}}km内配送</view>
+    </view>
+    <!-- 店铺公告 -->
+    <view class='shop-announcement'>{{shop.shop_info}}</view>
+  </view>
+  <!-- 横向导航菜单栏 -->
+  <view class='taps row-in space-ar'>
+    <view class='tap' bindtap='change_tap' id='0'
+      style='border-bottom: 6rpx solid {{tap_sle==0 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+      价格
+    </view>
+    <view class='tap' bindtap='change_tap' id='1'
+      style='border-bottom: 6rpx solid {{tap_sle==1 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+      评价
+    </view>
+    <view class='tap' bindtap='change_tap' id='2'
+      style='border-bottom: 6rpx solid {{tap_sle==2 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+      介绍
+    </view>
+  </view>
+  <!-- 底部内容区域 -->
+  <view class='content'>
+
+    <!-- 打印价格 -->
+    <view class='shop-merchandises-list' wx:if='{{tap_sle==0}}'>
+      <!-- 四周内凹 -->
+      <view class='left-riding'></view>
+      <view class='right-riding'></view>
+      <view class='top-riding'></view>
+      <view class='bottom-riding'></view>
+      <view wx:for='{{shop.shop_merchandises_list}}' wx:key='*this'>
+        <view class='a-merchandise'>
+          <view class='row-in space-in'>
+            <view class='row-in'>
+              <view class='merchandise-name'>{{item.name}}</view>
+              <view class='divide-symbol'>|</view>
+              <view class='merchandise-sales' wx:if='{{item.type=="main"}}'>
+                已印 {{item.sales}} 页
+              </view>
+              <view class='merchandise-sales' wx:else>已售 {{item.sales}}</view>
+            </view>
+            <view class='merchandise-price' wx:if='{{item.type=="main"}}'>￥{{item.price}} / 页</view>
+            <view class='merchandise-price' wx:else>￥{{item.price}}</view>
+          </view>
+          <view class='merchandise-describe'>{{item.describe}}</view>
+        </view>
+        <!-- 分割线 -->
+        <view class='hr' wx:if='{{index+1 < shop.shop_merchandises_list.length}}'></view>
+      </view>
+    </view>
+
+    <!-- 评论 -->
+    <view class='shop-comments' wx:if='{{tap_sle==1}}' style='{{shop_comments_style}}'>
+      <view wx:for='{{shop.shop_comments}}' wx:key='*this'>
+        <view class='a-comment'>
+          <view class='row-in space-in'>
+            <view class='row-in'>
+              <image class='comment-user-head-img' src='{{item.comment_user_head_img}}'></image>
+              <view class='comment-user-name'>{{item.comment_user_name}}</view>
+            </view>
+            <view class='comment-datetime'>{{item.comment_datetime}}</view>
+          </view>
+          <view class='comment-contain'>
+            <!-- 打星 -->
+            <view class='row-in'>
+              <view class='comment-label'>评价 </view>
+              <view wx:for='{{item.comment_stars}}' wx:key='*this'>
+                <image class='comment-star' src='/static/icon/star.png'></image>
+              </view>
+            </view>
+            <!-- 评价内容 -->
+            <view class='comment-text'>{{item.comment_contain}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 介绍 -->
+    <view class='shop-intro' wx:if='{{tap_sle==2}}'>
+      <view class='shop-intro-contain'>
+        <!-- 四周内凹 -->
+        <view class='left-riding'></view>
+        <view class='right-riding'></view>
+        <view class='top-riding'></view>
+        <view class='bottom-riding'></view>
+        <image class='shop-intro-pic' src='{{shop.shop_intro_pic}}' mode='widthFix'></image>
+        <view class='shop-intro-text'>{{shop.shop_intro_text}}</view>
+      </view>
+    </view>
+  </view>
+</view>

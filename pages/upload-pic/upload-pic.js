@@ -22,7 +22,7 @@ Page({
         for(var i = 0; i < res.tempFilePaths.length; i++){
           pic_list[pic_list.length] = res.tempFilePaths[i]
         }
-        console.log(pic_list)
+        // console.log(pic_list)
         that.setData({
           pic_list: pic_list
         })

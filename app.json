@@ -12,7 +12,8 @@
     "pages/sle-shop/sle-shop",
     "pages/sle-consignee/sle-consignee",
     "pages/upload-file/upload-file",
-    "pages/private-policy/private-policy"
+    "pages/private-policy/private-policy",
+    "pages/shop-detail/shop-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#343131",

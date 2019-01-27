@@ -58,21 +58,19 @@
   background: #c9c9c9;
   font-size: 28rpx;
   color: #fefefe;
-  line-height: 40rpx;
+  line-height: 50rpx;
   padding: 0 10rpx;
   margin: 10rpx 0;
   border-radius: 7rpx;
-  border: 0.2rpx solid #c9c9c9;
 }
 .shop-open{
-  background: #58f158;
+  background: #ffcc00;
   font-size: 28rpx;
   color: #fefefe;
-  line-height: 40rpx;
+  line-height: 50rpx;
   padding: 0 10rpx;
   margin: 10rpx 0;
   border-radius: 7rpx;
-  border: 0.2rpx solid #c9c9c9;
 }
 .shop-name {
   width: 200rpx;

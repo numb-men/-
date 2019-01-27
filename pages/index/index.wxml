@@ -79,7 +79,7 @@
   </view>
   <!-- 敬请期待 -->
   <view class="print-type-sle-item row-in border-f7">
-    <image class='print-type-icon' src='/static/icon/file-type-unkown.png'></image>
+    <image class='print-type-icon' src='/static/icon/file-type-unknow.png'></image>
     <view class='column-in space-ar'>
       <view class='print-type-name'>更多类型</view>
       <view class='print-type-describe'>

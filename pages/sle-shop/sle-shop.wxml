@@ -3,6 +3,7 @@
   <view class='shop-list'>
     <view wx:for='{{shop_list}}' wx:key='*this'>
       <view class='a-shop'>
+        <!-- 顶部 -->
         <view class='top row-in space-in'>
           <view class='row-in'>
             <image class='shop-head-img' src='{{item.shop_head_img}}'></image>
@@ -15,6 +16,7 @@
             <view class='shop-distance'>{{item.shop_distance}} km</view>
           </view>
         </view>
+        <!-- 中部 -->
         <view class='center row-in'>
           <view class='shop-order-num'>已打印{{item.shop_order_num}}单</view>
           <view class='divide-symbol'>|</view>
@@ -24,6 +26,7 @@
             营业时间 {{item.shop_open_time}}-{{item.shop_rest_time}}
           </view>
         </view>
+        <!-- 地址、标签栏 -->
         <view class='row-in space-in'>
           <view class='column-in space-in'>
             <view class='shop-addr'>{{item.shop_addr}}</view>
@@ -35,6 +38,7 @@
               </view>
             </view>
           </view>
+          <!-- 选择图标 -->
           <image class='whether-sle' src='/static/icon/{{item.shop_is_sle?"in-sle":"un-sle"}}.png'
             catchtap='select_it' id='{{index}}'></image>
         </view>

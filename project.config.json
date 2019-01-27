@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -67,6 +67,32 @@
 					"name": "sle-shop",
 					"pathName": "pages/sle-shop/sle-shop",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop-detail",
+					"pathName": "pages/shop-detail/shop-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop-detail",
+					"pathName": "pages/shop-detail/shop-detail",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop-detail",
+					"pathName": "pages/shop-detail/shop-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop-detail",
+					"pathName": "pages/shop-detail/shop-detail",
 					"scene": null
 				},
 				{

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "店铺详情",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 50,
+  "disableScroll": false
+}
