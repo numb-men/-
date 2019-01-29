@@ -123,5 +123,11 @@ Page({
     wx.navigateBack({
       delta: 1
     })
+  },
+
+  to_shop_detail_page: function() {
+    wx.navigateTo({
+      url: '../shop-detail/shop-detail',
+    })
   }
 })

@@ -2,7 +2,7 @@
 <view class='contain' style='{{contain_style}}'>
   <view class='shop-list'>
     <view wx:for='{{shop_list}}' wx:key='*this'>
-      <view class='a-shop'>
+      <view class='a-shop' catchtap='to_shop_detail_page'>
         <!-- 顶部 -->
         <view class='top row-in space-in'>
           <view class='row-in'>

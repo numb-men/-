@@ -143,6 +143,79 @@
       </textarea>
     </view>
   </view>
+  <!-- 价格 -->
+  <view class='price-contain' wx:if='{{verify_text == "支付"}}'>
+    <view class='label-title'>价格</view>
+    <view class='hr'></view>
+    <view class='price'>
+      <view class='file-box column-in space-ar'>
+        <view class='row-in space-in'>
+          <view class='row-in'>
+            <image class='file-type' src='/static/icon/file-type-{{file_type}}.png'></image>
+            <view class='file-name'>{{file_name}}</view>
+          </view>
+          <view class='whether-delivery'>配送</view>
+        </view>
+        <view class='row-in'>
+          <view class='page-num'>实际页数 {{page_num}} 页</view>
+          <image class='statement' src='/static/icon/statement.png'></image>
+        </view>
+        <view class='row-in'>
+          <view class='unit-price'>{{order_type}} ￥{{unit_price}} / 页</view>
+        </view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/unit-price.png'></image>
+          <view class='left-title'>单价</view>
+        </view>
+        <view class='file-unit-price'>￥{{file_unit_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/page-num.png'></image>
+          <view class='left-title'>份数</view>
+        </view>
+        <view class='file-unit-price'>{{file_num}} 份</view>
+      </view>
+      <view class='devide-line'></view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/payment-2.png'></image>
+          <view class='left-title'>合计</view>
+        </view>
+        <view class='file-all-price'>￥{{all_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/bind.png'></image>
+          <view class='left-title'>装订</view>
+        </view>
+        <view class='bind-price'>￥{{bind_price}}</view> 
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/delivery.png'></image>
+          <view class='left-title'>配送</view>
+        </view>
+        <view class='delivery-price'>￥{{delivery_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/discount.png'></image>
+          <view class='left-title'>折扣</view>
+        </view>
+        <view class='discount-price'>-￥{{discount_price}}</view>
+      </view>
+      <view class='row-in space-in'>
+        <view class='row-in'>
+          <image class='btn-icon-2' src='/static/icon/payment.png'></image>
+          <view class='payment'>应付</view>
+        </view>
+        <view class='payment-price'>￥{{payment_price}}</view>
+      </view>
+    </view>
+  </view>
 </view>
 
-<view class='verify-btn'>下一步</view>
+<view class='verify-btn' bindtap='verify'>{{verify_text}}</view>

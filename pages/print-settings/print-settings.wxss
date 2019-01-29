@@ -56,25 +56,25 @@
 }
 .shop-rest {
   background: #c9c9c9;
-  font-size: 28rpx;
+  font-size: 25rpx;
   color: #fefefe;
-  line-height: 50rpx;
-  padding: 0 10rpx;
+  line-height: 40rpx;
+  padding: 0 7rpx;
   margin: 10rpx 0;
   border-radius: 7rpx;
 }
 .shop-open{
   background: #ffcc00;
-  font-size: 28rpx;
+  font-size: 25rpx;
   color: #fefefe;
-  line-height: 50rpx;
-  padding: 0 10rpx;
+  line-height: 40rpx;
+  padding: 0 7rpx;
   margin: 10rpx 0;
   border-radius: 7rpx;
 }
 .shop-name {
   width: 200rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   line-height: 60rpx;
   font-weight: bold;
   margin-left:15rpx;
@@ -97,6 +97,7 @@
   margin-left: 75rpx;
 }
 .settings {
+  margin-bottom: 20rpx;
   border-radius: 7rpx;
   padding: 15rpx 25rpx;
   background: #fefefe;
@@ -149,10 +150,10 @@
   border-radius: 7rpx;
 }
 .radio-group {
-  padding-left: 30rpx;
+  padding-left: 45rpx;
 }
 radio {
-  transform:scale(0.75);
+  transform: scale(0.75);
 }
 .radio {
   padding: 15rpx;
@@ -211,4 +212,105 @@ radio {
   left: 0;
   z-index: 100;
   border-top: 0.2rpx solid #f6f4f7;
+}
+
+.price-contain {
+  margin-bottom: 20rpx;
+  border-radius: 7rpx;
+  padding: 15rpx 25rpx;
+  background: #fefefe;
+}
+.price {
+  padding: 15rpx 10rpx;
+}
+.file-box {
+  border-radius: 7rpx;
+  padding: 5rpx;
+  margin-left: 15rpx;
+  background: #fefefe;
+}
+.file-type {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 7.5rpx 15rpx 7.5rpx 5rpx;
+}
+.file-name {
+  font-size: 28rpx;
+  line-height: 55rpx;
+  font-weight: bold;
+}
+.whether-delivery {
+  font-size: 28rpx;
+  line-height: 55rpx;
+  color: #666666;
+}
+.page-num {
+  font-size: 23rpx;
+  line-height: 55rpx;
+  color: #343131;
+  padding-left: 60rpx;
+}
+.statement {
+  margin: 12.5rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+.unit-price {
+  padding-left: 60rpx;
+  padding-bottom: 15rpx;
+  font-size: 23rpx;
+  line-height: 55rpx;
+}
+
+.file-unit-price {
+  font-size: 28rpx;
+  line-height: 55rpx;
+}
+.file-all-price {
+  font-size: 30rpx;
+  line-height: 55rpx;
+  color: #ffcc00;
+  font-weight: bold;
+}
+.btn-icon-2 {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 7.5rpx;
+  margin-right: 15rpx;
+  margin-left: 20rpx;
+}
+.left-title {
+  font-size: 28rpx;
+  line-height: 55rpx;
+  color: #343131;
+}
+.bind-price {
+  font-size: 28rpx;
+  line-height: 55rpx;
+}
+.delivery-price {
+  font-size: 28rpx;
+  line-height: 55rpx;
+}
+.discount-price {
+  font-size: 28rpx;
+  line-height: 55rpx;
+  color: red;
+}
+.payment {
+  font-size: 28rpx;
+  line-height: 55rpx;
+  color: #343131;
+  font-weight: bold;
+}
+.payment-price {
+  font-size: 30rpx;
+  line-height: 70rpx;
+  font-weight: bold;
+}
+.devide-line {
+  width: 100%;
+  height: 2rpx;
+  margin: 10rpx 0;
+  background: #f6f4f7;
 }

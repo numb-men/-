@@ -84,21 +84,21 @@
 .file-type {
   width: 40rpx;
   height: 40rpx;
-  margin: 5rpx 15rpx 5rpx 5rpx;
+  margin: 7.5rpx 15rpx 7.5rpx 5rpx;
 }
 .file-name {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   font-weight: bold;
 }
 .whether-delivery {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   color: #666666;
 }
 .page-num {
   font-size: 23rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   color: #343131;
   padding-left: 60rpx;
 }
@@ -111,47 +111,47 @@
   padding-left: 60rpx;
   padding-bottom: 15rpx;
   font-size: 23rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
 }
 
 .file-unit-price {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
 }
 .file-all-price {
   font-size: 30rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   color: #ffcc00;
   font-weight: bold;
 }
 .btn-icon-2 {
   width: 40rpx;
   height: 40rpx;
-  padding: 5rpx;
+  padding: 7.5rpx;
   margin-right: 15rpx;
   margin-left: 20rpx;
 }
 .left-title {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   color: #343131;
 }
 .bind-price {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
 }
 .delivery-price {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
 }
 .discount-price {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   color: red;
 }
 .payment {
   font-size: 28rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   color: #343131;
   font-weight: bold;
 }

@@ -44,7 +44,7 @@ Page({
     shop: {
       shop_head_img: "/static/icon/shop-head-img.png",
       shop_name: "超人文印",
-      shop_is_open: true,
+      shop_is_open: false,
       shop_distance: 1.2,
       shop_order_num: 123,
       shop_rave_reviews: 92.2,
@@ -79,7 +79,20 @@ Page({
       "右侧装订",
       "顶部装订",
       "不装订"
-    ]
+    ],
+
+    page_num: 10,
+    order_type: "黑白双面",
+    unit_price: "0.15",
+    file_unit_price: "1.50",
+    file_num: 10,
+    all_price: "15.00",
+    bind_price: "1.00",
+    delivery_price: "2.00",
+    discount_price: "1.00",
+    payment_price: "17.00",
+
+    verify_text: "确定"
   },
 
   onLoad: function (options) {
@@ -212,5 +225,47 @@ Page({
     wx.navigateTo({
       url: '../sle-consignee/sle-consignee',
     })
+  },
+
+  verify: function() {
+    if (this.data.verify_text == "确定"){
+      //向后台请求页数，计算价格并呈现，提示支付
+      wx.showLoading({
+        title: '计算页数中',
+        mask: true,
+      })
+      this.setData({
+        verify_text: "支付"
+      })
+      setTimeout(function () {
+        wx.hideLoading()
+        wx.pageScrollTo({
+          scrollTop: 2500,
+          duration: 500,
+        })
+      }, 3000)
+    } else {
+      //调取支付
+      //...
+      wx.showLoading({
+        title: '支付中',
+        mask: true,
+      })
+      //跳转订单详情页面
+      setTimeout(function(){
+        wx.hideLoading()
+        wx.showToast({
+          title: '支付成功！',
+          icon: 'none',
+          mask: true,
+          duration: 1000,
+        })
+        setTimeout(function () {
+          wx.navigateTo({
+            url: '../order-detail/order-detail',
+          })
+        }, 1200)
+      }, 4000)
+    }
   }
 })
