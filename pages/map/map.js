@@ -49,4 +49,10 @@ Page({
     this.mapCtx = wx.createMapContext('arround-printer-map')
     this.mapCtx.moveToLocation()
   },
+
+  to_shop_join_page: function() {
+    wx.navigateTo({
+      url: '../shop-join/shop-join',
+    })
+  }
 })

@@ -84,5 +84,11 @@ Page({
     wx.navigateTo({
       url: '../consignee-manage/consignee-manage',
     })
+  },
+
+  to_shop_join_page: function () {
+    wx.navigateTo({
+      url: '../shop-join/shop-join',
+    })
   }
 })

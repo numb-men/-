@@ -13,7 +13,8 @@
     "pages/sle-consignee/sle-consignee",
     "pages/upload-file/upload-file",
     "pages/private-policy/private-policy",
-    "pages/shop-detail/shop-detail"
+    "pages/shop-detail/shop-detail",
+    "pages/shop-join/shop-join"
   ],
   "window": {
     "navigationBarBackgroundColor": "#343131",

@@ -46,7 +46,7 @@
 </view>
 
 <!-- 悬浮菜单 -->
-<view class='float-menu menu-3 float-fixed'>
+<view class='float-menu menu-3 float-fixed' catchtap='to_shop_join_page'>
   <view class='float-item row-in space-ar'>
     <image class='float-item-icon' src='/static/icon/float-item-icon-5.png'></image>
     <view class='float-item-title'>店铺加盟</view>

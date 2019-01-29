@@ -4,7 +4,7 @@
     周边共有 {{arround_printer_num}} 家打印店
   </view>
   <image class='join-us-icon' src='/static/icon/float-item-icon-5.png'></image>
-  <view class='join-us'>
+  <view class='join-us' catchtap='to_shop_join_page'>
     店铺加盟
   </view>
 </view>
