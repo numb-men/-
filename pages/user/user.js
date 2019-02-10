@@ -80,15 +80,21 @@ Page({
     })
   },
 
-  to_consignee_manage: function(){
+  to_consignee_manage_page: function() {
     wx.navigateTo({
       url: '../consignee-manage/consignee-manage',
     })
   },
 
-  to_shop_join_page: function () {
+  to_shop_join_page: function() {
     wx.navigateTo({
       url: '../shop-join/shop-join',
+    })
+  },
+
+  to_feedback_page: function() {
+    wx.navigateTo({
+      url: '../feedback/feedback',
     })
   }
 })

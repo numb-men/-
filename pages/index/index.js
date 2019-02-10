@@ -87,9 +87,15 @@ Page({
     })
   },
 
-  to_private_policy_page:function(){
+  to_private_policy_page: function() {
     wx.navigateTo({
       url: '../private-policy/private-policy',
+    })
+  },
+  
+  to_feedback_page: function() {
+    wx.navigateTo({
+      url: '../feedback/feedback',
     })
   }
 })

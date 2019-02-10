@@ -14,7 +14,10 @@
     "pages/upload-file/upload-file",
     "pages/private-policy/private-policy",
     "pages/shop-detail/shop-detail",
-    "pages/shop-join/shop-join"
+    "pages/shop-join/shop-join",
+    "pages/feedback/feedback",
+    "pages/chargeback/chargeback",
+    "pages/order-evaluation/order-evaluation"
   ],
   "window": {
     "navigationBarBackgroundColor": "#343131",
@@ -26,7 +29,6 @@
   "tabBar": {
     "color": "#343131",
     "selectedColor": "#ffcc00",
-    "boderStyle": "white",
     "backgroundColor": "white",
     "position": "bottom",
     "list": [

@@ -110,17 +110,17 @@
     <view class='devide-line'></view>
     <!-- 按钮 -->
     <view class='btn-box row-in space-in'>
-      <view class='row-in'>
+      <view class='row-in' catchtap='to_chargeback_page'>
         <image class='btn-icon' src='/static/icon/chargeback.png'></image>
         <view class='btn gray'>申请退单</view>
       </view>
       <view class='devide-long-string'>|</view>
-      <view class='row-in'>
+      <view class='row-in' catchtap='call_shop'>
         <image class='btn-icon' src='/static/icon/call.png'></image>
         <view class='btn blk'>联系商家</view>
       </view>
       <view class='devide-long-string'>|</view>
-      <view class='row-in'>
+      <view class='row-in' catchtap='to_order_evaluation_page'>
         <image class='btn-icon' src='/static/icon/verify.png'></image>
         <view class='btn blk'>确认收件</view>
       </view>

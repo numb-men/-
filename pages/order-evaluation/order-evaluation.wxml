@@ -1,0 +1,47 @@
+<!--pages/order-evaluation/order-evaluation.wxml-->
+<view class='content'>
+  <view class='top row-in'>
+    <image class='shop-head-img' src='{{shop_head_img}}'></image>
+    <view class='column-in'>
+      <view class='shop-name'>{{shop_name}}</view>
+      <view class='row-in'>
+        <image class='file-type' src='/static/icon/file-type-{{file_type}}.png'></image>
+        <view class='file-name'>{{file_name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='label-line row-in space-in' style='padding: 15rpx 25rpx;'>
+    <view class='row-in'>
+      <image class='label-icon' src='/static/icon/marking.png'></image>
+      <view class='label'>打个星吧~</view>
+    </view>
+    <view class='row-in'>
+      <view wx:for='{{mark_stars}}' wx:key='*this'>
+        <image class='mark-star' src='/static/icon/star.png'
+          id='{{"light-" + (index + 1)}}'
+          catchtap='bind_star'>
+        </image>
+      </view>
+      <view wx:for='{{5 - mark_stars}}' wx:key='*this'>
+        <image class='mark-star' src='/static/icon/gray-star.png' 
+          id='{{"gray-" + (index + 1)}}'
+          catchtap='bind_star'>
+        </image>
+      </view>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <!-- 评价内容 -->
+  <view class='evaluation'>
+    <textarea class='evaluation-content'
+      value='{{evaluation}}' 
+      placeholder='给个详细的评价吧~'
+      placeholder-class='evaluation-content-p' 
+      bindblur='evaluation_change' 
+      bindconfirm='evaluation_change'
+      maxlength='300'>
+    </textarea>
+  </view>
+  <!-- 确定 -->
+  <view class='verify-btn' bindtap='verify'>确定</view>
+</view>

@@ -29,15 +29,15 @@
   <!-- 横向导航菜单栏 -->
   <view class='taps row-in space-ar'>
     <view class='tap' bindtap='change_tap' id='0'
-      style='border-bottom: 6rpx solid {{tap_sle==0 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+      style='border-bottom: 5rpx solid {{tap_sle==0 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
       价格
     </view>
     <view class='tap' bindtap='change_tap' id='1'
-      style='border-bottom: 6rpx solid {{tap_sle==1 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+      style='border-bottom: 5rpx solid {{tap_sle==1 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
       评价
     </view>
     <view class='tap' bindtap='change_tap' id='2'
-      style='border-bottom: 6rpx solid {{tap_sle==2 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+      style='border-bottom: 5rpx solid {{tap_sle==2 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
       介绍
     </view>
   </view>

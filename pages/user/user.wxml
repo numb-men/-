@@ -23,7 +23,7 @@
     <image class='enter-icon' src='/static/icon/enter.png'></image>
   </view>
   <view class='hr'></view>
-  <view class='float-item row-in space-ar' catchtap='to_consignee_manage'>
+  <view class='float-item row-in space-ar' catchtap='to_consignee_manage_page'>
     <image class='float-item-icon' src='/static/icon/float-item-icon-2.png'></image>
     <view class='float-item-title'>收件管理</view>
     <image class='enter-icon' src='/static/icon/enter.png'></image>
@@ -32,7 +32,7 @@
 
 <!-- 悬浮菜单 -->
 <view class='float-menu menu-2 float-fixed'>
-  <view class='float-item row-in space-ar'>
+  <view class='float-item row-in space-ar' catchtap='to_feedback_page'>
     <image class='float-item-icon' src='/static/icon/float-item-icon-3.png'></image>
     <view class='float-item-title'>使用反馈</view>
     <image class='enter-icon' src='/static/icon/enter.png'></image>

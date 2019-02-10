@@ -4,6 +4,7 @@ Page({
   data: {
     shop_head_img: "/static/icon/shop-head-img.png",
     shop_name: "八号楼打印店",
+    shop_phone: "1234567890",
     status_point: [
       "status-point-finish", 
       "status-point-wait", 
@@ -61,6 +62,26 @@ Page({
     console.log("change position " + that.data.to_top)
     this.setData({
       to_top: that.data.to_top ? false:true
+    })
+  },
+
+  to_chargeback_page: function() {
+    wx.navigateTo({
+      url: '../chargeback/chargeback',
+    })
+  },
+
+  call_shop: function() {
+    var shop_phone = this.data.shop_phone
+    wx.makePhoneCall({
+      phoneNumber: shop_phone,
+      fail: e => console.log(e)
+    })
+  },
+
+  to_order_evaluation_page() {
+    wx.navigateTo({
+      url: '../order-evaluation/order-evaluation',
     })
   }
 })

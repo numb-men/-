@@ -1,0 +1,162 @@
+<!--pages/feedback/feedback.wxml-->
+<!-- 横向导航菜单栏 -->
+<view class='taps row-in space-ar'>
+  <view class='tap' bindtap='change_tap' id='0'
+    style='border-bottom: 5rpx solid {{tap_sle==0 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+    意见反馈
+  </view>
+  <view class='tap' bindtap='change_tap' id='1'
+    style='border-bottom: 5rpx solid {{tap_sle==1 ? "#ffcc00;font-weight:bold;":"#fefefe;"}}'>
+    报个BUG
+  </view>
+</view>
+<view class='content'>
+  <!-- 意见反馈 -->
+  <view class='feedback' wx:if='{{tap_sle == 0}}'>
+    <view class='label-line row-in space-in'>
+      <view class='row-in'>
+        <image class='label-icon' src='/static/icon/marking.png'></image>
+        <view class='label'>打个星吧~</view>
+      </view>
+      <view class='row-in'>
+        <view wx:for='{{mark_stars}}' wx:key='*this'>
+          <image class='mark-star' src='/static/icon/star.png'
+            id='{{"light-" + (index + 1)}}'
+            catchtap='bind_star'>
+          </image>
+        </view>
+        <view wx:for='{{5 - mark_stars}}' wx:key='*this'>
+          <image class='mark-star' src='/static/icon/gray-star.png' 
+            id='{{"gray-" + (index + 1)}}'
+            catchtap='bind_star'>
+          </image>
+        </view>
+      </view>
+    </view>
+    <view class='hr'></view>
+    <!-- 调查问题 -->
+    <view class='question' wx:for='{{questions}}' wx:key='*this'>
+      <view class='question-title'>{{item.title}}</view>
+      <view class='options row-in'>
+        <view class='option row-in' wx:for='{{item.options}}' wx:key='*this'>
+          <image class='whether-sle' 
+            src='/static/icon/{{item.selected ? "in-sle":"un-sle"}}.png'>
+          </image>
+          <view class='option-text'>{{item.text}}</view>
+        </view>
+      </view>
+      <view class='hr'></view>
+    </view>
+    <!-- 邮箱 -->
+    <view class='label-line row-in space-in'>
+      <view class='row-in'>
+        <image class='label-icon' src='/static/icon/mail.png'></image>
+        <view class='label'>请留邮箱</view>
+      </view>
+      <input class='mail-input'
+        value='{{mail}}' 
+        type='text'
+        placeholder='方便我们给您回复~'
+        placeholder-class='mail-p'
+        maxlength='30' 
+        bindblur='mail_change' 
+        bindconfirm='mail_change'>
+      </input>
+    </view>
+    <view class='hr'></view>
+    <!-- 备注 -->
+    <view class='label-line row-in'>
+      <image class='label-icon' src="/static/icon/comment.png"></image>
+      <view class='label'>建议</view>
+    </view>
+    <view class='comment'>
+      <textarea class='comment-content'
+        value='{{comment}}' 
+        placeholder='您的建议会帮助我们把趣小印做得更好~'
+        placeholder-class='comment-content-p' 
+        bindblur='comment_change' 
+        bindconfirm='comment_change'
+        maxlength='300'>
+      </textarea>
+    </view>
+    <!-- 确定 -->
+    <view class='verify-btn' bindtap='feedback_verify'>确定</view>
+  </view>
+  <!-- 报个BUG -->
+  <view class='report-bug' wx:else>
+    <view class='label-line row-in space-in'>
+      <view class='row-in'>
+        <image class='label-icon' src='/static/icon/comment.png'></image>
+        <view class='label'>出错页面</view>
+      </view>
+      <view class='picker' style='width: 330rpx;'>
+        <picker
+          value='{{bug.error_page}}'
+          bindchange='bug_error_page_change'
+          mode='selector'
+          range='{{bug_error_page_range}}'>
+          {{bug_error_page_range[bug.error_page]}}
+        </picker>
+      </view>
+    </view>
+    <view class='hr'></view>
+    <view class='label-line row-in space-in'>
+      <view class='row-in'>
+        <image class='label-icon' src='/static/icon/comment.png'></image>
+        <view class='label'>手机机型</view>
+      </view>
+      <view class='picker' style='width: 330rpx;'>
+        <picker
+          value='{{bug.phone_model}}'
+          bindchange='bug_phone_model_change'
+          mode='selector'
+          range='{{bug_phone_model_range}}'>
+          {{bug_phone_model_range[bug.phone_model]}}
+        </picker>
+      </view>
+    </view>
+    <view class='hr'></view>
+    <view class='label-line row-in space-in'>
+      <view class='row-in'>
+        <image class='label-icon' src='/static/icon/comment.png'></image>
+        <view class='label'>出错时间</view>
+      </view>
+      <view class='row-in'>
+        <view class='picker'>
+          <picker
+            value='{{bug.error_date}}'
+            bindchange='bug_error_date_change'
+            mode='date'>
+            {{bug.error_date}}
+          </picker>
+        </view>
+        <view class='picker'>
+          <picker
+            value='{{bug.error_time}}'
+            bindchange='bug_error_time_change'
+            mode='time'>
+            {{bug.error_time}}
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='hr'></view> 
+    <!-- 详细描述 -->
+    <view class='label-line row-in'>
+      <image class='label-icon' src="/static/icon/comment.png"></image>
+      <view class='label'>详细描述</view>
+    </view>
+    <view class='comment'>
+      <textarea class='detail-content'
+        value='{{bug.detail}}' 
+        placeholder='关于BUG的详细描述~'
+        placeholder-class='comment-content-p' 
+        bindblur='bug_detail_change' 
+        bindconfirm='bug_detail_change'
+        maxlength='300'>
+      </textarea>
+    <!-- 确定 -->
+    <view class='verify-btn' bindtap='bug_verify'>确定</view>
+  </view>
+</view>
+</view>

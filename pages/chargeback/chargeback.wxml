@@ -1,0 +1,20 @@
+<!--pages/chargeback/chargeback.wxml-->
+<view class='content'>
+  <view class='label-line row-in'>
+    <image class='label-icon' src='/static/icon/comment.png'></image>
+    <view class='label'>退单原因</view>
+  </view>
+  <!-- 原因 -->
+  <view class='reason'>
+    <textarea class='reason-content'
+      value='{{reason}}' 
+      placeholder='请详细描述您遇到的问题和退单的原因，我们会在一个工作日内受理完成给您回复~'
+      placeholder-class='reason-content-p' 
+      bindblur='reason_change' 
+      bindconfirm='reason_change'
+      maxlength='400'>
+    </textarea>
+  </view>
+  <!-- 确定 -->
+  <view class='verify-btn' bindtap='verify'>确定</view>
+</view>
