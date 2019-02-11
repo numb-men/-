@@ -1,6 +1,5 @@
 {
-  "navigationBarTitleText": "发现",
-  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "附近",
   "enablePullDownRefresh": false,
   "onReachBottomDistance": 50,
   "disableScroll": false

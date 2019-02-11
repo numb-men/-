@@ -5,7 +5,8 @@ Page({
     shop_head_img: "/static/icon/shop-head-img.png",
     file_type: "pdf",
     shop_name: "超人文印",
-    file_name: "福州大学软件工程试验1.pdf"
+    file_name: "福州大学软件工程试验1.pdf",
+    evaluation: ""
   },
 
   onLoad: function (options) {

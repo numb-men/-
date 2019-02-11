@@ -33,7 +33,7 @@ Page({
       "12:10",
       "",
       ""
-      ],
+    ],
     file_type: "pdf",
     file_name: "福州大学实验1.pdf",
     page_num: 10,

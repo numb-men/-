@@ -61,7 +61,7 @@ Page({
           comment_user_head_img: "/static/icon/user.png",
           comment_user_name: "落霜飞雪",
           comment_datetime: "2019-01-20 10:12:10",
-          comment_stars: [1,2,3,4,5],
+          comment_stars: 5,
           comment_contain: "很不错。"
         },
         {

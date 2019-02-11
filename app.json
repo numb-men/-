@@ -40,7 +40,7 @@
       },
       {
         "pagePath": "pages/map/map",
-        "text": "发现",
+        "text": "附近",
         "iconPath": "/static/icon/map.png",
         "selectedIconPath": "/static/icon/map-sle.png"
       },

@@ -16,7 +16,7 @@ Page({
     userInfo: null,
     notice_me: false,
     notice_title: "请您登录",
-    notice_detail: "为了您能获得更好的程序体验，请您先登录",
+    notice_detail: "为了您能获得更好的程序体验，请您先授权登录",
   },
 
   onLoad: function (options) {
