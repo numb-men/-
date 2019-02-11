@@ -42,7 +42,10 @@ Page({
         detail_position: "江西小学",
         is_default: true,
       },
-    ]
+    ],
+
+    //操作的数组子项下标
+    index:'',
   },
   //编辑地址
   edit_position:function(e){
@@ -56,21 +59,31 @@ Page({
   },
   //删除地址
   delete_position:function(e){
-    //对应子项的ID
-    var index = e.currentTarget.dataset.text;
+    //获取对应子项的下标，并设置
+    var i = e.currentTarget.dataset.index;
     this.setData({
-      isdelete:true
+      isdelete:true,
+      index:i,
     })
   },
   //确认删除
   modal_bind_confirm:function(){
     //调用接口删除
+    //............
+
+    //删除数组对应的下标项，并更新数组
+    this.data.address_list.splice(this.data.index, 1);
+    this.setData({
+      address_list: this.data.address_list
+    })
+    //隐藏对话框
     this.setData({
       isdelete: false
     })
   },
   //取消删除
   modal_bind_cancel:function(){
+    //隐藏对话框
     this.setData({
       isdelete: false
     })

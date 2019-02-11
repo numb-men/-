@@ -38,11 +38,11 @@
         <!-- 地址操作栏 -->
         <view class='operation'>
           <!-- 编辑 -->
-          <image class='position-op-edit' src="/static/icon/edit.png" bindtap='edit_position' data-text="{{item.id}}"></image>
-          <view class='position-edit' bindtap='edit_position' data-text="{{item.id}}">编辑</view>
+          <image class='position-op-edit' src="/static/icon/edit.png" bindtap='edit_position' data-text="{{item.id}}" data-index='{{index}}'></image>
+          <view class='position-edit' bindtap='edit_position' data-text="{{item.id}}" data-index='{{index}}'>编辑</view>
           <!-- 删除 -->
-          <image class='position-op-delete' src="/static/icon/delete.png" bindtap='delete_position' data-text="{{item.id}}"></image>
-          <view class='position-delete' bindtap='delete_position' data-text="{{item.id}}">删除</view>
+          <image class='position-op-delete' src="/static/icon/delete.png" bindtap='delete_position' data-text="{{item.id}}" data-index='{{index}}'></image>
+          <view class='position-delete' bindtap='delete_position' data-text="{{item.id}}" data-index='{{index}}'>删除</view>
         </view>
       </view>
     </view>
