@@ -46,7 +46,7 @@
   display: inline;
   float: left;
   width: 135rpx;
-  padding-top: 14rpx;
+  padding-top: 15rpx;
 }
 
 .section{

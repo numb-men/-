@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.5.1",
 	"appid": "wx828671bfb24c2981",
-	"projectname": "2.0",
+	"projectname": "1.1",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -88,6 +88,11 @@
 					"pathName": "pages/feedback/feedback",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "consignee-manage",
+					"pathName": "pages/consignee-manage/consignee-manage"
 				}
 			]
 		}

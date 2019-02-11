@@ -50,6 +50,6 @@
 </view>
 <!--悬浮球-->
 <view bindtap='add_detial'>
-  <image class="add_icon" src="/static/icon/float-ball.png"></image>
+  <image class="add_icon" src="/static/icon/add-float-ball.png"></image>
 </view>
 
