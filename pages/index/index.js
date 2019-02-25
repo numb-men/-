@@ -50,7 +50,7 @@ Page({
     if (userInfo) {
       // 用户按了允许授权按钮
       // console.log('btn getUserInfo')
-      app.saveUserInfo(userInfo)
+      app.save_user_info(userInfo)
     } else {
       //用户按了拒绝按钮
       wx.showToast({
