@@ -20,6 +20,7 @@ Page({
   },
 
   onLoad: function (options) {
+
     var that = this
     wx.getSetting({ // 获取用户信息
       success: res => {

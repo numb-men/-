@@ -53,7 +53,7 @@
     <view class='column-in space-ar'>
       <view class='print-type-name'>文件打印</view>
       <view class='print-type-describe'>
-        (支持pdf doc xls ppt txt 等文件类型)
+        (支持pdf文件类型)
       </view>
     </view>
   </view>
@@ -73,7 +73,7 @@
     <view class='column-in space-ar'>
       <view class='print-type-name'>证件打印</view>
       <view class='print-type-describe'>
-        (支持身份证等多种证件打印)
+        (支持学生证等多种证件打印)
       </view>
     </view>
   </view>

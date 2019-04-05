@@ -110,7 +110,7 @@ App({
     this.update_session(url, data, that, callback)  //先验证登录凭证是否过期
   },
 
-  //一个通用的执行访问服务器get/post数据之后再执行相关操作的函数，支持setData等事件
+  //一个通用的执行访问服务器post数据之后再执行相关操作的函数，支持setData等事件
   request_: function (url, data, that, callback) {
     wx.showLoading({
       title: '加载中',
