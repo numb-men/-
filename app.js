@@ -33,7 +33,13 @@ App({
                 app.globalData.session = res_data.session
                 app.globalData.user_phone = res_data.phone 
                 console.log('session', app.globalData.session)
-                url = app.globalData.urls["login"]
+                if (typeof callback_ == 'function' && url_) {
+                  // 执行逻辑:访问
+                  app.request(url_, data_, that_, callback_)
+                } else if (typeof callback_ == 'function') {
+                  // 非访问
+                  callback_()
+                }
               } else {
                 app.show_fail(code)
               }
