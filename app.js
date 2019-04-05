@@ -25,7 +25,7 @@ App({
             success: res => {
               //解析服务器返回的数据，获取状态码
               console.log(res)
-              res_data = JSON.parse(res.data)
+              var res_data = JSON.parse(res.data)
               code = res_data.code
               console.log(url, code)
               //如果无误，获取服务器返回的数据
@@ -35,7 +35,7 @@ App({
                 console.log('session', app.globalData.session)
                 if (typeof callback_ == 'function' && url_) {
                   // 执行逻辑:访问
-                  app.request(url_, data_, that_, callback_)
+                  app.request_(url_, data_, that_, callback_)
                 } else if (typeof callback_ == 'function') {
                   // 非访问
                   callback_()
@@ -184,9 +184,9 @@ App({
   save_user_info: function (userInfo) {
     if (userInfo) {
       this.globalData.userInfo = userInfo
-      //var url = 'wx_save_userInfo_url', data = {}, that = this
-      //data.userInfo = userInfo
-      //that.requestTos(url, data, that, function () { })
+      var url = 'save_user', data = {}, that = this
+      data.user = userInfo
+      that.request(url, data, that, function () {})
     }
   },
 
