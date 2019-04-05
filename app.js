@@ -30,7 +30,7 @@ App({
               //解析服务器返回的数据，获取状态码
               console.log(res)
               var res_data = JSON.parse(res.data)
-              code = res_data.code
+              code = res.statusCode
               console.log(url, code)
               //如果无误，获取服务器返回的数据
               if (code == 200) {
@@ -130,7 +130,7 @@ App({
         //解析服务器返回的数据，获取状态码
         console.log(res)
         var res_data = JSON.parse(res.data)
-        code = res_data.code
+        code = res.statusCode
         console.log(app.globalData.urls[url], code)
         //如果无误，获取服务器返回的数据
         if (code == 200) {
