@@ -15,8 +15,8 @@ App({
         console.log('res', res)
         if (res.code) {
           var code = -1
-          var url = app.globalData.urls['get_openId'] + res.code
-          var data = {}
+          var url = app.globalData.urls['login']
+          var data = { code: res.code }
           wx.request({
             url: url,
             dataType: 'JSON',
@@ -25,45 +25,21 @@ App({
             success: res => {
               //解析服务器返回的数据，获取状态码
               console.log(res)
-              code = res.statusCode
+              res_data = JSON.parse(res.data)
+              code = res_data.code
               console.log(url, code)
               //如果无误，获取服务器返回的数据
-              if (code == 200 || code == 202) {
-                app.globalData.openId = JSON.parse(res.data).openid
-                console.log('openId', app.globalData.openId)
+              if (code == 200) {
+                app.globalData.session = res_data.session
+                app.globalData.user_phone = res_data.phone 
+                console.log('session', app.globalData.session)
                 url = app.globalData.urls["login"]
-                data = { openId: app.globalData.openId }
-                wx.request({
-                  url: url,
-                  dataType: 'JSON',
-                  method: 'POST',
-                  data: data,
-                  success: res => {
-                    code = res.statusCode
-                    if (code == 200 || code == 202) {
-                      app.globalData.session = res.header["Set-Cookie"]
-
-                      if (typeof callback_ == 'function' && url_) {
-                        // 执行逻辑:访问
-                        app.request(url_, data_, that_, callback_)
-                      } else if (typeof callback_ == 'function') {
-                        // 非访问
-                        callback_()
-                      }
-                    }else{
-                      // app.show_fail(code)
-                    }
-                  },
-                  err: res => {
-                    // app.show_fail()
-                  }
-                })
               } else {
-                // app.show_fail(code)
+                app.show_fail(code)
               }
             },
             error: res => {
-              // app.show_fail()
+              app.show_fail(code)
             }
           })
         } else {
@@ -71,6 +47,14 @@ App({
         }
       }
     })
+  },
+
+  show_fail: function(code){
+    if (code == -1){
+      console.log("服务器错误")
+    } else{
+      console.log(code, "本地错误")
+    }
   },
 
   //校验状态码是否已经过期|是否拥有， 并对校验码自动进行更新，同时执行操作（可选）
