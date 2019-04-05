@@ -22,6 +22,10 @@ App({
             dataType: 'JSON',
             method: 'POST',
             data: data,
+            header: {
+              'content-type': 'application/x-www-form-urlencoded' // 默认值
+            },
+
             success: res => {
               //解析服务器返回的数据，获取状态码
               console.log(res)
@@ -30,7 +34,7 @@ App({
               console.log(url, code)
               //如果无误，获取服务器返回的数据
               if (code == 200) {
-                app.globalData.session = res_data.session
+                app.globalData.session = res.header["Set-Cookie"]
                 app.globalData.user_phone = res_data.phone 
                 console.log('session', app.globalData.session)
                 if (typeof callback_ == 'function' && url_) {
@@ -125,26 +129,26 @@ App({
       success: res => {
         //解析服务器返回的数据，获取状态码
         console.log(res)
-        // code = JSON.parse(res.data).message.code
-        // console.log(app.globalData.urls[url], code)
-        // //如果无误，获取服务器返回的数据
-        // if (code >= 0) {
-        //   var res_data = JSON.parse(res.data).data
-        //   console.log(app.globalData.urls[url], 'res_data', res_data)
-        //   if (typeof callback == 'function') {
-        //     if (that) {
-        //       callback(that, code, res_data) //执行业务逻辑
-        //     } else {
-        //       //  console.log('Not that!')
-        //     }
-        //   } else {
-        //     //  console.log('Not function!')
-        //   }
-        // }
+        var res_data = JSON.parse(res.data)
+        code = res_data.code
+        console.log(app.globalData.urls[url], code)
+        //如果无误，获取服务器返回的数据
+        if (code == 200) {
+          console.log(app.globalData.urls[url], 'res_data', res_data)
+          if (typeof callback == 'function') {
+            if (that) {
+              callback(that, code, res_data) //执行业务逻辑
+            } else {
+               console.log('Not that!')
+            }
+          } else {
+             console.log('Not function!')
+          }
+        }
       },
 
       fail: res => {
-        // console.log('request to ', url, ' fail')
+        console.log('request to ', url, ' fail')
       },
 
       complete: res => {
