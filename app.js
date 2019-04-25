@@ -3,7 +3,7 @@ App({
   onLaunch: function () {
     this.globalData.urls = require('/config') //载入接口
     this.get_screen_size()
-    this.update_session(null, null, null, this.get_user_info)
+    this.update_token(null, null, null, this.get_user_info)
   },
 
   login: function (url_, data_, that_, callback_) {
@@ -15,6 +15,7 @@ App({
         console.log('res', res)
         if (res.code) {
           var code = -1
+          var msg = ''
           var url = app.globalData.urls['login']
           var data = { code: res.code }
           wx.request({
@@ -22,21 +23,21 @@ App({
             dataType: 'JSON',
             method: 'POST',
             data: data,
-            header: {
-              'content-type': 'application/x-www-form-urlencoded' // 默认值
-            },
+            // header: {
+            //   'content-type': 'application/x-www-form-urlencoded', // 默认值
+            // },
 
             success: res => {
               //解析服务器返回的数据，获取状态码
-              console.log(res)
-              var res_data = JSON.parse(res.data)
-              code = res.statusCode
-              console.log(url, code)
+              var json = JSON.parse(res.data)
+              code = json.code
+              msg = json.msg
+              console.log(url, code, msg, json)
               //如果无误，获取服务器返回的数据
               if (code == 200) {
-                app.globalData.session = res.header["Set-Cookie"]
-                app.globalData.user_phone = res_data.phone 
-                console.log('session', app.globalData.session)
+                app.globalData.token = json.data.token
+                app.globalData.user = json.data.user
+                console.log('token', app.globalData.token)
                 if (typeof callback_ == 'function' && url_) {
                   // 执行逻辑:访问
                   app.request_(url_, data_, that_, callback_)
@@ -45,7 +46,7 @@ App({
                   callback_()
                 }
               } else {
-                app.show_fail(code)
+                app.show_fail(code, msg)
               }
             },
             error: res => {
@@ -59,25 +60,25 @@ App({
     })
   },
 
-  show_fail: function(code){
+  show_fail: function(code, msg){
     if (code == -1){
       console.log("服务器错误")
     } else{
-      console.log(code, "本地错误")
+      console.log(code, msg)
     }
   },
 
   //校验状态码是否已经过期|是否拥有， 并对校验码自动进行更新，同时执行操作（可选）
-  update_session: function (url, data, that, callback) {
+  update_token: function (url, data, that, callback, method) {
       var app = this
-      if (app.globalData.session) {
+      if (app.globalData.token) {
         // 检测
         wx.checkSession({
           success: res => {
             console.log('update-session-in-use')
             if (typeof callback == 'function') {
               // 执行逻辑
-              app.request(url, data, that, callback)
+              app.request_(url, data, that, callback, method)
             }
           },
 
@@ -95,17 +96,20 @@ App({
       }
   },
 
-  //request_封装update_session
+  //request_封装update_token
   //that: this引用
   //url: 访问的url（string）
   //data:发送的数据
-  //callback(that, res_data, code): 操作的函数
-  request(url, data, that, callback) {
-    this.update_session(url, data, that, callback)  //先验证登录凭证是否过期
+  //callback(that, json, code): 操作的函数
+  get_request(url, data, that, callback) {
+    this.update_token(url, data, that, callback, 'GET')  //先验证登录凭证是否过期
+  },
+  post_request(url, data, that, callback) {
+    this.update_token(url, data, that, callback, 'POST')  //先验证登录凭证是否过期
   },
 
   //一个通用的执行访问服务器post数据之后再执行相关操作的函数，支持setData等事件
-  request_: function (url, data, that, callback) {
+  request_: function (url, data, that, callback, method) {
     wx.showLoading({
       title: '加载中',
       mask: true,
@@ -114,30 +118,30 @@ App({
     var code = -1  //code=-1为fail
     var header = {}
     console.log(url, data, that, callback)
-    if (app.globalData.session) {
-      header.cookie = app.globalData.session //session为登录凭证
+    if (app.globalData.token) {
+      header.token = app.globalData.token //token为登录凭证
     } else {
-      console.log('Not session!')
+      console.log('Not token!')
     }
     wx.request({
       url: app.globalData.urls[url],
       header: header,
-      data: { data: data },
+      data: data,
       dataType: 'JSON',
-      method: 'POST',
+      method: method,
 
       success: res => {
         //解析服务器返回的数据，获取状态码
         console.log(res)
-        var res_data = JSON.parse(res.data)
-        code = res.statusCode
+        var json = JSON.parse(res.data)
+        code = json.code
         console.log(app.globalData.urls[url], code)
         //如果无误，获取服务器返回的数据
         if (code == 200) {
-          console.log(app.globalData.urls[url], 'res_data', res_data)
+          console.log(app.globalData.urls[url], 'json', json)
           if (typeof callback == 'function') {
             if (that) {
-              callback(that, code, res_data) //执行业务逻辑
+              callback(that, code, json) //执行业务逻辑
             } else {
                console.log('Not that!')
             }
@@ -188,9 +192,16 @@ App({
   save_user_info: function (userInfo) {
     if (userInfo) {
       this.globalData.userInfo = userInfo
-      var url = 'save_user', data = {}, that = this
-      data.user = userInfo
-      that.request(url, data, that, function () {})
+      console.log(userInfo)
+      var url = 'save_user',
+          data = {
+            id: this.globalData.user.id,
+            wxName: userInfo.nickName
+          },
+          that = this
+
+      // data.user = userInfo
+      that.post_request(url, data, that, function() {})
     }
   },
 
